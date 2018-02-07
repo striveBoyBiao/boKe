@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片无缝滑动</title>
+		
+		<style>
+			.outer{ width: 600px; border: 1px solid;}
+			img{float: left;}
+			.inner{height: 152;float: left;}
+			
+			#outer{overflow: hidden;}
+			
+		</style>
+		
+		<script>
+			var timeout; 
+			var step=5;
+			function $(id){return document.getElementById(id);}
+			
+			window.onload=function(){
+				$("inner2").innerHTML=$("inner1").innerHTML;
+				move();
+				$("outer").onmouseover=stopScroll;
+				$("outer").onmouseout=startScroll;
+			}
+			
+			//滑轮移动
+			function move(){
+				var outer=$("outer");
+				outer.scrollLeft+=step;
+				timeout=setTimeout("move()",100);
+				
+				if(outer.scrollLeft>=600){
+					outer.scrollLeft=0;
+				}
+			}
+			
+			//鼠标移上，暂停滑轮
+			function stopScroll(){
+				clearTimeout(timeout);
+			}
+			//鼠标引开，滑动滑轮
+			function startScroll(){
+				
+				move();
+			}
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		
+		<div class="outer" id="outer">
+			
+			<div style="height: 200px; width: 1204px;">
+			<div class="inner" id="inner1">
+				<img src="img/月儿.jpg" width="300px" height="200px"/>
+				<img src="img/石兰.jpg" width="300px" height="200px" />
+				
+			</div>
+			
+			<div class="inner" id="inner2"></div>
+			
+			</div>
+			
+			
+		</div>
+		
+		
+	</body>
+</html>

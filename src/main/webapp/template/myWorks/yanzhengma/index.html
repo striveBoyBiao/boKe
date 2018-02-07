@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			function getnum(min,max){
+				return Math.floor(Math.random()*(max-min)+min);
+			}
+			
+			function getcolor(min,max){
+				return "rgb("+getnum(min,max)+","+getnum(min,max)+","+getnum(min,max)+")";
+			}
+			
+			function change(){
+				var ca = document.getElementById("yanzhengma");
+				var w = ca.width;
+				var h = ca.height;
+				var ctx = ca.getContext("2d");
+				//随机背景色
+				ctx.fillStyle=getcolor(188,240);
+				ctx.fillRect(0,0,w,h);
+				//随机数字填入
+				var str="";
+				for(i=0;i<5;i++){
+					var num = getnum(0,10);
+					str=str+num;
+					ctx.fillStyle=getcolor(50,160);
+					ctx.font=getnum(20,30)+"px 微软雅黑";
+					var x = 20+i*30;
+					var y = getnum(30,45);
+					var deg=getnum(-30,30);
+					ctx.rotate(deg*Math.PI/180);
+					ctx.translate(x,y);
+					ctx.fillText(num,0,0);
+					ctx.translate(-x,-y);
+					ctx.rotate(-deg*Math.PI/180);
+				}
+				
+				for(i=0;i<4;i++){
+					ctx.strokeStyle=getcolor(40,180);
+					ctx.beginPath();
+					ctx.moveTo(getnum(0,w),getnum(0,h));
+					ctx.lineTo(getnum(0,w),getnum(0,h));ctx.stroke();
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="yanzhengma" width="200px" height="50px" style="background-color: black;" onclick="change()"></canvas>
+	</body>
+</html>
