@@ -12,9 +12,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <title>慢生活 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>慢生活 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="慢生活,个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="杨青个人博客网站,一个站在web前段设计之路的女技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在java后端设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -61,6 +61,8 @@
             <a href="/main/lifeDetails.do" title="IP要突破2000+了" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
         <h2><a title="【孕期日记】生活本该如此" href="http://www.yangqq.com/news/s/2015-01-23/741.html">【孕期日记】生活本该如此</a></h2>
         <p class="dateview"><span>发布时间：2015-01-28</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/news/s/">日记</a>]</span></p>
         <figure>
@@ -71,6 +73,9 @@
             <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
+
         <h2><a title="即便是坑，我也想要拉你入伙！" href="http://www.yangqq.com/news/life/2014-07-31/725.html">即便是坑，我也想要拉你入伙！</a></h2>
         <p class="dateview"><span>发布时间：2014-07-31</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/news/life/">程序人生</a>]</span></p>
         <figure>
@@ -292,6 +297,9 @@
             <a href="http://www.yangqq.com/news/s/2013-09-08/609.html" title="爱情不容有错，即使错了那就重来" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
+
         <h2><a title="擦肩而过" href="http://www.yangqq.com/news/read/2013-09-06/608.html">擦肩而过</a></h2>
         <p class="dateview"><span>发布时间：2013-09-06</span><span>作者：</span><span>[<a href="http://www.yangqq.com/news/read/">欣赏</a>]</span></p>
         <figure>
@@ -302,6 +310,9 @@
             <a href="http://www.yangqq.com/news/read/2013-09-06/608.html" title="擦肩而过" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
+
         <div class="blank"></div>
         <div class="page">
             <a title="Total record"><b>107</b> </a><b>1</b>

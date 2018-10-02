@@ -2396,17 +2396,17 @@
     </div>
     <aside class="right">
         <div class="about_c">
-            <p>网名：<span>DanceSmile</span> | 即步非烟</p>
+            <p>网名：<span>zizhuling</span> | 紫竹林☆秋风</p>
             <p>姓名：何彪 </p>
             <p>籍贯：湖北省—孝感市</p>
-            <p>现居：上海市—浦东新区</p>
-            <p>职业：软件开发、网站制作</p>
+            <p>现居：上海市—松江大学城</p>
+            <p>职业：后端开发</p>
             <p>个人微信号：15971417393</p>
             <p>微信请备注：博客</p>
-            <a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=d4d4a26952d46d564ee5bf7782743a70d5a8c405f4f9a33a60b0eec380743c64">
+            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=7c7c3734906c9aed9ac7e12dc985be94420ca478cb8fd12b4188cafec5362b5e">
                 <img src="/images/group.png" alt="何彪个人博客网站" title="何彪个人博客网站"></a>
             <a target="_blank"
-               href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E">
+               href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1169763240@qq.com">
                 <img src="/images/ico_mailme_22.png" alt="何彪个人博客网站"></a>
              <img src="/images/aboutphoto.jpg" alt="何彪个人博客网站">
         </div>
@@ -2414,7 +2414,7 @@
 </article>
 <footer>
     <p>Design by DanceSmile
-        <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备18012534号-1</a>
         <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));

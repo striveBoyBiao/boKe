@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/boKe.iml" filepath="$PROJECT_DIR$/boKe.iml" />
+      <module fileurl="file://C:/ApplicationProgram/Project/IDEA/CARP-DATA/datasolution.iml" filepath="C:/ApplicationProgram/Project/IDEA/CARP-DATA/datasolution.iml" />
     </modules>
   </component>
 </project>

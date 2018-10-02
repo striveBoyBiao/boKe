@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="boKe" />
+        <module name="datasolution" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boKe" target="1.8" />
+      <module name="datasolution" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

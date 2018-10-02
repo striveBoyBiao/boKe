@@ -16,25 +16,28 @@
     </context:component-scan>
 
     <!-- 第一种方式：加载一个properties文件 -->
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+  <!--  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties"/>
-    </bean>
+    </bean>-->
 
 
-    <!-- 第二种方式：加载多个properties文件
+    <!-- 第二种方式：加载多个properties文件 -->
     <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="locations">
             <list>
                 <value>classpath:jdbc.properties</value>
                 <value>classpath:common.properties</value>
+                <value>classpath:log4j.properties</value>
             </list>
         </property>
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
         <property name="properties" ref="configProperties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"></property>
+        <property name="order" value="1"></property>
     </bean>
-    -->
+
 
     <!-- 配置数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -81,6 +84,8 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
 
+    <!--导入ureport报表配置文件-->
+    <import resource="classpath:ureport-console-context.xml" />
 
 </beans>
 
