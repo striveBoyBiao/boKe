@@ -1,7 +1,14 @@
 package com.siyuruoli.controller;
 
+import com.siyuruoli.model.ContentDO;
+import com.siyuruoli.service.MainService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by hebiao on 2017/7/8.
@@ -9,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/main")
 public class MainController {
+    @Autowired
+    private MainService mainService;
     /**
      *跳到主界面
      * @return
@@ -88,5 +97,16 @@ public class MainController {
     @RequestMapping("/lenrnDetails")
     public String lenrnDetails(){
         return "lenrnDetails";
+    }
+
+    /**
+     * 查询碎言碎语界面数据
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/findDoing")
+    public List<ContentDO> findDoing(){
+         List<ContentDO> list=mainService.findDoing();
+        return list;
     }
 }

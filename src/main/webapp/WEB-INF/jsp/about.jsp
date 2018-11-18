@@ -59,7 +59,7 @@
             <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=8smrzoqa&amp;productCode=vm" target="_blank" class="blog_link">购买空间</a>
             <a href="http://www.yangqq.com/jstt/web/2014-01-18/644.html" target="_blank" class="blog_link">参考青姐给的空间配置</a>
         </p>
-        <p>程 序：boodo</p>
+        <p>程 序：boke</p>
 
     </div>
     <aside class="right">
