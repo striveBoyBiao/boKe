@@ -1,3 +1,4 @@
+/*初始化查询碎言碎语界面数据*/
 $("document").ready(function(){
 	$.ajax({
 		url:"/main/findDoing.do" ,
@@ -20,11 +21,56 @@ $("document").ready(function(){
 			$("#bloglist").html(resultHtml);
 	//		pageInfo(data.pageNo,data.pageCount);
 		}
-		
-		
 	})
 })
 
+/*初始化查询慢生活界面数据*/
+$("document").ready(function(){
+    $.ajax({
+        url:"/main/findLife.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "pageNo":"1"
+        },
+        success:function(data){
+            var resultHtml = "";
+            $.each(data,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.ypename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            $("#findLife").html(resultHtml);
+        }
+    })
+})
+
+/*点击日记，欣赏，程序人生，经典语录等查询相对应数据*/
+function queryLanMu(type) {
+    $.ajax({
+        url:"/main/findLife.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "type":type
+        },
+        success:function(data){
+            var resultHtml = "";
+            $("#findLife").html("");
+            $.each(data,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.ypename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            $("#findLife").html(resultHtml);
+        }
+    })
+	
+}
 
 
 

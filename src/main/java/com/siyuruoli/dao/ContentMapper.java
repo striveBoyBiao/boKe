@@ -13,4 +13,5 @@ import java.util.Map;
 public interface ContentMapper {
 
         List<ContentDO> findDoing(Map<String,Object> map);
+        List<Map<String,Object>> findLife(Map<String,Object> map);
 }

@@ -25,8 +25,6 @@
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
-    <!--初始化js -->
-    <script type="text/javascript" src="/js/main.js"></script>
 </head>
 
 <body>
@@ -96,7 +94,8 @@
     var cpro_id = "u2896052";
 </script>
 <script type="text/javascript" src="/js/i.js"></script>
-
+<!--初始化js -->
+<script type="text/javascript" src="/js/main.js"></script>
 </body>
 
 </html>

@@ -13,5 +13,10 @@ public interface MainService {
      * 查询碎言碎语界面数据
      * @return
      */
-    public List<ContentDO> findDoing();
+    public List<ContentDO> findDoing(Map<String,Object> map);
+    /**
+     * 查询慢生活界面数据
+     * @return
+     */
+    public List<Map<String,Object>> findLife(Map<String,Object> map);
 }
