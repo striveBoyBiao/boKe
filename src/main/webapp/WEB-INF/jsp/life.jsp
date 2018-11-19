@@ -22,7 +22,8 @@
     <![endif]-->
     <!-- 返回顶部调用 begin -->
     <link href="/css/lrtk.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link href="/css/bootstrap.min.css"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
@@ -50,7 +51,7 @@
 <article class="blogs">
     <h1 class="t_nav"><span>“慢生活”不是懒惰，放慢速度不是拖延时间，而是让我们在生活中寻找到平衡。</span><a href="/main/main.do" class="n1">网站首页</a><a
         href="#" class="n2">慢生活</a></h1>
-    <div class="newblog left" id="findLife">
+         <div class="newblog left" id="findLife">
 
 
      <%--   <h2><a title="IP要突破2000+了" href="http://www.yangqq.com/news/s/2016-05-20/751.html">IP要突破2000+了</a></h2>
@@ -78,9 +79,8 @@
         </ul>
         <div class="line"></div>
 --%>
-
-        <div class="blank"></div>
-        <div class="page">
+       <%-- <div class="blank"></div>--%>
+      <%--  <div class="page">
             <a title="Total record"><b>107</b> </a><b>1</b>
             <a href="http://www.yangqq.com/news/index_2.html">2</a>
             <a href="http://www.yangqq.com/news/index_3.html">3</a>
@@ -88,8 +88,10 @@
             <a href="http://www.yangqq.com/news/index_5.html">5</a>
             <a href="http://www.yangqq.com/news/index_2.html">&gt;</a>
             <a href="http://www.yangqq.com/news/index_5.html">&gt;&gt;</a>
-        </div>
-    </div>
+        </div>--%>
+
+                 <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
+         </div>
     <aside class="right">
         <div class="rnav">
             <ul>
@@ -110,16 +112,16 @@
         <div class="rnavs">
             <ul>
                 <li class="rnav1">
-                    <a href="http://www.yangqq.com/news/s/" target="_blank">日记</a>
+                    <a href="#" onclick="queryLanMu('1')">日记</a>
                 </li>
                 <li class="rnav2">
-                    <a href="http://www.yangqq.com/news/read/" target="_blank">欣赏</a>
+                    <a href="#" onclick="queryLanMu('2')">欣赏</a>
                 </li>
                 <li class="rnav3">
-                    <a href="http://www.yangqq.com/news/life/" target="_blank">程序人生</a>
+                    <a href="#" onclick="queryLanMu('3')">程序人生</a>
                 </li>
                 <li class="rnav4">
-                    <a href="http://www.yangqq.com/news/humor/" target="_blank">经典语录</a>
+                    <a href="#" onclick="queryLanMu('4')">经典语录</a>
                 </li>
             </ul>
         </div>
@@ -228,7 +230,7 @@
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by DanceSmile
+    <p>Design by StriveBoyBiao
         <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
         <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -242,6 +244,7 @@
     var cpro_id = "u2896052";
 </script>
 <script type="text/javascript" src="/js/i.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <!--初始化js -->
 <script type="text/javascript" src="/js/main.js"></script>
 </body>

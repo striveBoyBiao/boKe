@@ -2,6 +2,7 @@ package com.siyuruoli.controller;
 
 import com.siyuruoli.model.ContentDO;
 import com.siyuruoli.service.MainService;
+import com.siyuruoli.utils.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -103,27 +104,29 @@ public class MainController {
     }
 
     /**
-     * 查询碎言碎语界面数据
+     * 分页查询碎言碎语界面数据
      * @return
      */
     @ResponseBody
     @RequestMapping("/findDoing")
-    public List<ContentDO> findDoing(){
-        Map<String,Object> map=new HashMap<>();
-         List<ContentDO> list=mainService.findDoing(map);
-        return list;
+    public PageInfo findDoing(HttpServletRequest request){
+         Map<String,Object> map=new HashMap<>();
+         map.put("pageNo",request.getParameter("pageNo"));
+         PageInfo list=mainService.findDoing(map);
+         return list;
     }
 
     /**
-     * 查询慢生活界面数据
+     * 分页查询慢生活界面数据
      * @return
      */
     @ResponseBody
     @RequestMapping("/findLife")
-    public List<Map<String,Object>> findLife(HttpServletRequest request){
+    public PageInfo findLife(HttpServletRequest request){
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
-        List<Map<String,Object>> list=mainService.findLife(map);
+        map.put("pageNo",request.getParameter("pageNo"));
+        PageInfo list=mainService.findLife(map);
         return list;
     }
     /**
@@ -134,7 +137,7 @@ public class MainController {
     public String findlifeDetails(HttpServletRequest request,Model model){
         Map<String,Object> map=new HashMap<>();
         map.put("cid",request.getParameter("cid"));
-        List<Map<String,Object>> list=mainService.findLife(map);
+        List<Map<String,Object>> list=mainService.findlifeDetails(map);
         model.addAttribute("list",list.get(0));
         return "lifeDetails";
     }

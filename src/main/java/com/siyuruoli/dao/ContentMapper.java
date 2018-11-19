@@ -14,4 +14,8 @@ public interface ContentMapper {
 
         List<ContentDO> findDoing(Map<String,Object> map);
         List<Map<String,Object>> findLife(Map<String,Object> map);
+        List<Map<String,Object>> findlifeDetails(Map<String,Object> map);
+        int queryCount(Map<String,Object> map);
+        /**查询慢生活数据数量*/
+        int queryLifeCount(Map<String,Object> map);
 }

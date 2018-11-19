@@ -22,7 +22,8 @@
     <![endif]-->
     <!-- 返回顶部调用 begin -->
     <link href="/css/lrtk.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link href="/css/bootstrap.min.css"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
@@ -63,7 +64,7 @@
         </ul>--%>
 
     </div>
-    <div class="page">
+  <%--  <div class="page">
         <a title="Total record"><b>168</b> </a><b>1</b>
         <a href="http://www.yangqq.com/newstalk/index_2.html">2</a>
         <a href="http://www.yangqq.com/newstalk/index_3.html">3</a>
@@ -73,14 +74,15 @@
         <a href="http://www.yangqq.com/newstalk/index_7.html">7</a>
         <a href="http://www.yangqq.com/newstalk/index_2.html">&gt;</a>
         <a href="http://www.yangqq.com/newstalk/index_7.html">&gt;&gt;</a>
-    </div>
+    </div>--%>
+    <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
 </div>
 <div id="tbox">
     <a id="togbook" href="/main/doing.do"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by DanceSmile
+    <p>Design by StriveBoyBiao
         <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
         <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -95,6 +97,7 @@
 </script>
 <script type="text/javascript" src="/js/i.js"></script>
 <!--初始化js -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 </body>
 

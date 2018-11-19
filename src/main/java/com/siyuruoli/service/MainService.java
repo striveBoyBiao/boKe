@@ -1,6 +1,7 @@
 package com.siyuruoli.service;
 
 import com.siyuruoli.model.ContentDO;
+import com.siyuruoli.utils.PageInfo;
 
 import java.util.List;
 import java.util.Map;
@@ -10,13 +11,19 @@ import java.util.Map;
  */
 public interface MainService {
     /**
-     * 查询碎言碎语界面数据
+     * 分页查询碎言碎语界面数据
      * @return
      */
-    public List<ContentDO> findDoing(Map<String,Object> map);
+    public PageInfo findDoing(Map<String,Object> map);
     /**
-     * 查询慢生活界面数据
+     * 分页查询慢生活界面数据
      * @return
      */
-    public List<Map<String,Object>> findLife(Map<String,Object> map);
+    public PageInfo findLife(Map<String,Object> map);
+    /**
+     * 查询慢生活详细界面数据
+     * @return
+     */
+    public List<Map<String,Object>> findlifeDetails(Map<String,Object> map);
+
 }
