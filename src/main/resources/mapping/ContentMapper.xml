@@ -40,6 +40,24 @@
         <if test="type!=null and type!=''">and bc.CATEGORIES=#{type}</if>
         LIMIT #{pageBegin},#{pageSize}
     </select>
+    <!--分页查询慢生活最新文章-->
+    <select id="findLifeNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+                bc.title
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('1','2','3','4')
+        order by bc.gtm_modified desc
+        LIMIT #{news},#{newslength}
+    </select>
+    <!--分页查询慢生活排行榜-->
+    <select id="findLifeRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        bc.title
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('1','2','3','4')
+        order by bc.comments_num desc
+        LIMIT #{rank},#{ranklength}
+    </select>
 
     <!--查询慢生活详细界面数据-->
     <select id="findlifeDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
