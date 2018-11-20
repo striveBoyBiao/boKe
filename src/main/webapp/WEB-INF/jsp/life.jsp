@@ -130,8 +130,8 @@
             <h3>
                 <p>最新<span>文章</span></p>
             </h3>
-            <ul class="rank">
-                <li>
+            <ul class="rank" id="lifenewsdate">
+              <%--  <li>
                     <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
                 </li>
                 <li>
@@ -154,13 +154,13 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/news/read/2014-03-29/655.html" title="两只蜗牛艰难又浪漫的一吻" target="_blank">两只蜗牛艰难又浪漫的一吻</a>
-                </li>
+                </li>--%>
             </ul>
             <h3 class="ph">
                 <p>点击<span>排行</span></p>
             </h3>
-            <ul class="paih">
-                <li>
+            <ul class="paih" id="liferankdate">
+               <%-- <li>
                     <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
                 </li>
                 <li>
@@ -186,7 +186,7 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/news/s/2014-01-04/632.html" title="云南之行——初到昆明滇池半日游" target="_blank">云南之行——初到昆明滇池半日游</a>
-                </li>
+                </li>--%>
             </ul>
         </div>
         <script type="text/javascript">
