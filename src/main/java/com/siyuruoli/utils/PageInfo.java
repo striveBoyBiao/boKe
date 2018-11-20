@@ -24,7 +24,10 @@ public class PageInfo<T> {
 	private String type;
 	private String state;
 	private String mohu;
-	
+	//最新文章
+	private List<T> newsDate;
+	//排行榜
+	private List<T> rankDate;
 	
 
 	public PageInfo(String pageNo) {
@@ -120,6 +123,19 @@ public class PageInfo<T> {
 		this.queryCount = queryCount;
 	}
 
-	
+	public List<T> getNewsDate() {
+		return newsDate;
+	}
 
+	public void setNewsDate(List<T> newsDate) {
+		this.newsDate = newsDate;
+	}
+
+	public List<T> getRankDate() {
+		return rankDate;
+	}
+
+	public void setRankDate(List<T> rankDate) {
+		this.rankDate = rankDate;
+	}
 }

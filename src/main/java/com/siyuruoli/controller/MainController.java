@@ -137,8 +137,10 @@ public class MainController {
     public String findlifeDetails(HttpServletRequest request,Model model){
         Map<String,Object> map=new HashMap<>();
         map.put("cid",request.getParameter("cid"));
-        List<Map<String,Object>> list=mainService.findlifeDetails(map);
-        model.addAttribute("list",list.get(0));
+        PageInfo pageInfo=mainService.findlifeDetails(map);
+        model.addAttribute("list",pageInfo.getPageDate().get(0));
+        model.addAttribute("newsdate",pageInfo.getNewsDate());
+        model.addAttribute("rankdate",pageInfo.getRankDate());
         return "lifeDetails";
     }
 

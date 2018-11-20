@@ -64,7 +64,15 @@ public class MainServiceImpl implements MainService{
         pageInfo.setPageCount(pageCount);
         pageInfo.setType("1");
         List<Map<String,Object>> list=contentMapper.findLife(map);
+        map.put("news",0);
+        map.put("newslength",8);
+        map.put("rank",0);
+        map.put("ranklength",9);
+        List<Map<String,Object>> newsDate=contentMapper.findLifeNewsDate(map);
+        List<Map<String,Object>> rankDate=contentMapper.findLifeRankDate(map);
         pageInfo.setPageDate(list);
+        pageInfo.setNewsDate(newsDate);
+        pageInfo.setRankDate(rankDate);
         return pageInfo;
     }
     /**
@@ -72,8 +80,18 @@ public class MainServiceImpl implements MainService{
      * @return
      */
     @Override
-    public List<Map<String, Object>> findlifeDetails(Map<String, Object> map) {
+    public PageInfo findlifeDetails(Map<String, Object> map) {
+        PageInfo pageInfo=new PageInfo("1");
+        map.put("news",0);
+        map.put("newslength",8);
+        map.put("rank",0);
+        map.put("ranklength",5);
         List<Map<String,Object>> list=contentMapper.findlifeDetails(map);
-        return list;
+        List<Map<String,Object>> newsDate=contentMapper.findLifeNewsDate(map);
+        List<Map<String,Object>> rankDate=contentMapper.findLifeRankDate(map);
+        pageInfo.setPageDate(list);
+        pageInfo.setNewsDate(newsDate);
+        pageInfo.setRankDate(rankDate);
+        return pageInfo;
     }
 }

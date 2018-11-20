@@ -24,6 +24,6 @@ public interface MainService {
      * 查询慢生活详细界面数据
      * @return
      */
-    public List<Map<String,Object>> findlifeDetails(Map<String,Object> map);
+    public PageInfo findlifeDetails(Map<String,Object> map);
 
 }

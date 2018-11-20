@@ -18,4 +18,8 @@ public interface ContentMapper {
         int queryCount(Map<String,Object> map);
         /**查询慢生活数据数量*/
         int queryLifeCount(Map<String,Object> map);
+        /**查询慢生活最新文章*/
+        List<Map<String,Object>> findLifeNewsDate(Map<String,Object> map);
+        /**查询慢生活最新排行*/
+        List<Map<String,Object>> findLifeRankDate(Map<String,Object> map);
 }
