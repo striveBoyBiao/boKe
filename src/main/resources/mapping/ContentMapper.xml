@@ -40,7 +40,7 @@
         <if test="type!=null and type!=''">and bc.CATEGORIES=#{type}</if>
         LIMIT #{pageBegin},#{pageSize}
     </select>
-    <!--分页查询慢生活最新文章-->
+    <!--查询慢生活最新文章-->
     <select id="findLifeNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
         SELECT BC.CID,
                 bc.title
@@ -49,7 +49,7 @@
         order by bc.gtm_modified desc
         LIMIT #{news},#{newslength}
     </select>
-    <!--分页查询慢生活排行榜-->
+    <!--查询慢生活排行榜-->
     <select id="findLifeRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
         SELECT BC.CID,
         bc.title
@@ -73,5 +73,65 @@
         <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
         <if test="type!=null and type!=''">and bc.CATEGORIES=#{type}</if>
     </select>
+
+
+
+
+
+
+    <!--分页查询模板分享界面数据-->
+    <select id="findShare" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        BC.CONTENT,
+        DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
+        bc.title,
+        sd.name typename,
+        bc.author
+        FROM BLOG_CONTENT BC
+        left join sys_dict SD on sd.type='blog_type' and sd.value=bc.CATEGORIES
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.CATEGORIES=#{type}</if>
+        LIMIT #{pageBegin},#{pageSize}
+    </select>
+    <!--查询模板分享详细界面数据-->
+    <select id="findShareDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        BC.CONTENT,
+        DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
+        bc.title,
+        sd.name typename,
+        bc.author
+        FROM BLOG_CONTENT BC
+        left join sys_dict SD on sd.type='blog_type' and sd.value=bc.CATEGORIES
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.CATEGORIES=#{type}</if>
+    </select>
+    <!--查询模板分享数据数量-->
+    <select id="queryShareCount" parameterType="Map" resultType="int">
+        SELECT count(*)
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+    </select>
+    <!--查询模板分享最新文章-->
+    <select id="findShareNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        bc.title
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+        order by bc.gtm_modified desc
+        LIMIT #{news},#{newslength}
+    </select>
+    <!--查询模板分享排行榜-->
+    <select id="findShareRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        bc.title
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+        order by bc.comments_num desc
+        LIMIT #{rank},#{ranklength}
+    </select>
+
 
 </mapper>

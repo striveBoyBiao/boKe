@@ -85,9 +85,6 @@
         <div class="otherlink">
             <h2>相关文章</h2>
             <ul>
-                <c:forEach items="" var="">
-
-                </c:forEach>
                 <li>
                     <a href="http://www.yangqq.com/news/life/2013-09-13/610.html" title="一个三十而立的男程序员真实讲述：代码搅乱我的生活">一个三十而立的男程序员真实讲述：代码搅乱我的生活</a>
                 </li>
@@ -122,19 +119,19 @@
             <ul>
 
                 <li>
-                    <a href="#">日记</a>
+                    <a href="/main/life.do">日记</a>
                 </li>
 
                 <li>
-                    <a href="#">欣赏</a>
+                    <a href="/main/life.do">欣赏</a>
                 </li>
 
                 <li>
-                    <a href="#">程序人生</a>
+                    <a href="/main/life.do">程序人生</a>
                 </li>
 
                 <li>
-                    <a href="#">经典语录</a>
+                    <a href="/main/life.do">经典语录</a>
                 </li>
             </ul>
         </div>
@@ -143,19 +140,19 @@
             <ul>
 
                 <li>
-                    <a href="#">日记</a>
+                    <a href="/main/life.do">日记</a>
                 </li>
 
                 <li>
-                    <a href="#">欣赏</a>
+                    <a href="/main/life.do">欣赏</a>
                 </li>
 
                 <li>
-                    <a href="#">程序人生</a>
+                    <a href="/main/life.do">程序人生</a>
                 </li>
 
                 <li>
-                    <a href="#">经典语录</a>
+                    <a href="/main/life.do">经典语录</a>
                 </li>
             </ul>
         </div>
@@ -165,11 +162,12 @@
                 <p>栏目<span>最新</span></p>
             </h3>
             <ul class="rank" id="lifedetailsnewsdate">
-                <c:forEach items="${newsdate}" var="news" >
-                    <li>
-                        <a href='/main/findlifeDetails.do?cid=${news.cid}' title='${news.title}' >${news.title}</a>
-                    </li>
-                </c:forEach>
+                  <c:forEach items="${newsdate}" var="news" >
+                        <li>
+                            <a href='/main/findlifeDetails.do?cid=${news.cid}' title='${news.title}' >${news.title}</a>
+                        </li>
+                  </c:forEach>
+              <%--  </c:if>--%>
              <%--   <li>
                     <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
                 </li>

@@ -91,9 +91,9 @@
             text-align: center;
             width: 50px; //_overflow:hidden}.bdcs-container .bdcs-search-form-submit-magnifier{width:45px;padding:0;text-indent:-999em;overflow:hidden;background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon.png) no-repeat center center;_background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon_ie6.png) no-repeat center center}div#default-searchbox .default-channel-meun{position:relative;width:75px;display:inline-block;vertical-align:middle;cursor:pointer;background:#fff;float:left;overflow:visible}div#default-searchbox .default-channel-current{border:1px solid;position:relative;width:100%;border-right:0}div#default-searchbox .default-channel-current span{margin-left:8px}div#default-searchbox .default-channel-current i{overflow:hidden;width:0;height:0;border-width:6px 6px 0;border-color:#9E9E9E #fff;border-style:solid;display:block;position:absolute;right:10px;top:11px}div.cse-default-channel-container{display:block;position:absolute;z-index:30061000000}div.cse-default-channel-container .default-channel-list{display:none;width:99%;list-style:none;background:#fff;border:1px solid #DDD;border-top:0;margin:0;padding:0}div.cse-default-channel-container .default-channel-list li{background:0 0;line-height:24px;list-style:none;display:block;padding-left:7px;cursor:pointer}div.cse-default-channel-container .default-channel-list li:hover{background:#DDD}.bdcs-container .bdcs-search-form-input-wrap{}.bdcs-container .bdcs-search-form-input-notspan{margin-left:0px;font-family:Arial,SimSun,sans-serif;color:#a6a6a6;font-size:14px;}.bdcs-container .bdcs-search-form-input .icon-nofocus{left:;right:;top:;height:;width:;}.bdcs-container .bdcs-search{width:auto;height:30px;overflow:visible;border-color:#ffffff;border-radius:0px;border-width:0px;box-shadow:none;background-color:none;}.bdcs-container .bdcs-search-form-input{border-color:#a6a6a6;margin-right:10px;width:188px;height:28px;line-height:28px;font-family:Arial,SimSun,sans-serif;color:#a6a6a6;font-size:14px;border-radius:0px;background-color:#FFFFFF;}.bdcs-container .bdcs-search-form-input:focus{border-color:#f79646;}.bdcs-container .bdcs-search-form-submit-wrap{}.bdcs-container .bdcs-search-form-submit{border-color:#76923c;height:28px;width:50px;background-color:#9bbb59;color:#ffffff;font-family:Arial,SimSun,sans-serif;font-size:14px;border-radius:0px;}.bdcs-container .bdcs-search-form-submit{*height:30px;*margin-top:1px;}.bdcs-container .bdcs-search-form-submit{line-height:28px;}#bdcs-rec{display:none;}
     </style>
-    <title>模板分享 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>模板分享 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="html5模板,html5 css3 模板,个人博客模板,博客模板,个人网站模板,个人网页,个人网站制作,个人网站欣赏">
-    <meta name="description" content="杨青个人博客网站，提供个人博客模板，html5模板,博客模板，个人网站模板下载，个人主页网站，个人网站源码，个人网站设计，个人博客网站下载">
+    <meta name="description" content="何彪个人博客网站，提供个人博客模板，html5模板,博客模板，个人网站模板下载，个人主页网站，个人网站源码，个人网站设计，个人博客网站下载">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/share.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -101,7 +101,8 @@
     <![endif]-->
     <!-- 返回顶部调用 begin -->
     <link href="/css/lrtk.css" rel="stylesheet">
-    <script type="text/javascript" src="/css/jquery.js"></script>
+    <link href="/css/bootstrap.min.css"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/css/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
@@ -125,11 +126,12 @@
 
 </header>
 <article class="blogs">
-    <h1 class="t_nav"><span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。模板虽然免费，但是一味索取不去钻研学习，对你不会有任何好处！ </span><a href="/main/main.do"
-                                                                                                     class="n1">网站首页
-    </a><a href="#" class="n2">模板分享</a></h1>
-    <div class="newblog left">
-        <h2><a title="灯具公司复古风格PSD设计稿" href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html">灯具公司复古风格PSD设计稿</a></h2>
+    <h1 class="t_nav"><span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。模板虽然免费，但是一味索取不去钻研学习，对你不会有任何好处！ </span>
+        <a href="/main/main.do" class="n1">网站首页</a><a href="#" class="n2">模板分享</a></h1>
+    <div class="newblog left" id="findshare">
+
+
+     <%--   <h2><a title="灯具公司复古风格PSD设计稿" href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html">灯具公司复古风格PSD设计稿</a></h2>
         <p class="dateview"><span>发布时间：2017-07-16</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/download/newsfree/">企业网站模板</a>]</span></p>
         <figure>
             <a title="灯具公司复古风格PSD设计稿" href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html"><img src="img/8c6ef10d94e5bedde81f275da2c2a3e0.jpg" alt="灯具公司复古风格PSD设计稿"></a>
@@ -139,6 +141,9 @@
             <a href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html" target="_blank" title="灯具公司复古风格PSD设计稿" class="readmore">详细信息&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
+
         <h2><a title="个人博客模板古典系列之——江南墨卷Html" href="http://www.yangqq.com/download/div/2017-07-16/785.html">个人博客模板古典系列之——江南墨卷Html</a></h2>
         <p class="dateview"><span>发布时间：2017-07-16</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/download/div/">原创个人博客模板</a>]</span></p>
         <figure>
@@ -148,8 +153,13 @@
             <p>一共是四个页面，首页，图文列表，图片列表，文字内容。此模板风格为中国古典风格，山水画墨迹成就一幅江南墨卷。页面首页设计较为简单，突出文章重点。二级栏目导航菜单。图文列表显示，可用作相册展示，有鼠标滑过放大的效果。</p>
             <a href="http://www.yangqq.com/download/div/2017-07-16/785.html" target="_blank" title="个人博客模板古典系列之——江南墨卷Html" class="readmore">详细信息&gt;&gt;</a>
         </ul>
-        <div class="line"></div>
-        <h2><a title="古典风格-个人博客模板" href="http://www.yangqq.com/download/div/2017-07-13/783.html">古典风格-个人博客模板</a></h2>
+        <div class="line"></div>--%>
+
+
+
+
+
+      <%--  <h2><a title="古典风格-个人博客模板" href="http://www.yangqq.com/download/div/2017-07-13/783.html">古典风格-个人博客模板</a></h2>
         <p class="dateview"><span>发布时间：2017-07-13</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/download/div/">原创个人博客模板</a>]</span></p>
         <figure>
             <a title="古典风格-个人博客模板" href="http://www.yangqq.com/download/div/2017-07-13/783.html"><img src="img/f9c309c2b9402323695d666bea77fe54.gif" alt="古典风格-个人博客模板"></a>
@@ -380,9 +390,11 @@
             <p>政府网站在颜色方面不是红就是蓝色居多，不花哨，庄重，都会有祥云、民族特色的点缀最为背景图片。</p>
             <a href="http://www.yangqq.com/download/case/gov/2014-01-14/641.html" target="_blank" title="普法网站" class="readmore">详细信息&gt;&gt;</a>
         </ul>
-        <div class="line"></div>
+        <div class="line"></div>--%>
 
-        <div class="blank"></div>
+
+
+       <%-- <div class="blank"></div>
         <div class="page">
             <a title="Total record"><b>90</b> </a><b>1</b>
             <a href="http://www.yangqq.com/download/index_2.html">2</a>
@@ -390,7 +402,8 @@
             <a href="http://www.yangqq.com/download/index_4.html">4</a>
             <a href="http://www.yangqq.com/download/index_2.html">&gt;</a>
             <a href="http://www.yangqq.com/download/index_4.html">&gt;&gt;</a>
-        </div>
+        </div>--%>
+        <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
     </div>
     <aside class="right">
         <script type="text/javascript">
@@ -455,8 +468,8 @@
             <h3>
                 <p>最新<span>模板</span></p>
             </h3>
-            <ul class="rank">
-                <li>
+            <ul class="rank" id="sharenewsdate">
+             <%--   <li>
                     <a href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html" title="灯具公司复古风格PSD设计稿" target="_blank">灯具公司复古风格PSD设计稿</a>
                 </li>
                 <li>
@@ -479,13 +492,13 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/download/newsfree/2015-02-01/743.html" title="企业单页宣传模板" target="_blank">企业单页宣传模板</a>
-                </li>
+                </li>--%>
             </ul>
             <h3 class="ph">
                 <p>点击<span>排行</span></p>
             </h3>
-            <ul class="paih">
-                <li>
+            <ul class="paih" id="sharerankdate">
+               <%-- <li>
                     <a href="http://www.yangqq.com/download/div/2015-04-10/746.html" title="【活动作品】柠檬绿兔小白个人博客模板" target="_blank">【活动作品】柠檬绿兔小白个人博客模板</a>
                 </li>
                 <li>
@@ -511,7 +524,7 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/download/div/2014-08-18/727.html" title="情侣博客模板系列之《回忆》PSD" target="_blank">情侣博客模板系列之《回忆》PSD</a>
-                </li>
+                </li>--%>
             </ul>
         </div>
         <script type="text/javascript">
@@ -556,7 +569,7 @@
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by DanceSmile
+    <p>Design by zizhuling
         <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
         <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -570,7 +583,9 @@
     var cpro_id = "u2896052";
 </script>
 <script type="text/javascript" src="/js/i.js"></script>
-
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<!--初始化js -->
+<script type="text/javascript" src="/js/main.js"></script>
 </body>
 
 </html>

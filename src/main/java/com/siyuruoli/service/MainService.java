@@ -25,5 +25,15 @@ public interface MainService {
      * @return
      */
     public PageInfo findlifeDetails(Map<String,Object> map);
+    /**
+     * 分页查询模板分享界面数据
+     * @return
+     */
+    public PageInfo findShare(Map<String,Object> map);
+    /**
+     * 查询模板分享界面数据
+     * @return
+     */
+    public PageInfo findShareDetails(Map<String,Object> map);
 
 }

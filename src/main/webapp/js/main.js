@@ -16,7 +16,7 @@ $("document").ready(function(){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
                 resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
                 resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
-                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
             resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
@@ -65,6 +65,51 @@ $("document").ready(function(){
 		}
 	})
 })
+
+
+/**初始化查询模板分享界面数据*/
+$("document").ready(function(){
+    $.ajax({
+        url:"/main/findShare.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "pageNo":"1"
+        },
+        success:function(data){
+            var resultHtml = "";
+            var newsHtml = "";
+            var rankHtml = "";
+            /**生成页面数据*/
+            $.each(data.pageDate,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            /**生成最新文章数据*/
+            $.each(data.newsDate,function(index,element){
+                newsHtml += "<li>";
+                newsHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                newsHtml += "</li>";
+            })
+            /**生成最新排行数据*/
+            $.each(data.rankDate,function(index,element){
+                rankHtml += "<li>";
+                rankHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                rankHtml += "</li>";
+            })
+
+            $("#findshare").html(resultHtml);
+            $("#sharenewsdate").html(newsHtml);
+            $("#sharerankdate").html(rankHtml);
+            pageInfo(data.pageNo,data.pageCount,data.type);
+        }
+    })
+})
+
 
 
 
@@ -210,7 +255,23 @@ function queryLanMu(type) {
                     }
                 }
             });
-		}
+		}else if(type=='3'){
+            /**查询模板分享界面*/
+            $.ajax({
+                url:"/main/findShare.do" ,
+                type:"post",
+                data:{
+                    "pageNo":pageNo
+                },
+                datatype:"json",
+                success:function(data){
+                    var resultHtml = "";
+                    if(data){
+                        update3(resultHtml,data);
+                    }
+                }
+            });
+        }
 
 	 }
 
@@ -223,6 +284,7 @@ function queryLanMu(type) {
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
 			});
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
 			$("#findLife").html(resultHtml);
 			pageInfo(data.pageNo,data.pageCount,data.type);
 		}
@@ -241,6 +303,20 @@ function queryLanMu(type) {
 		    $("#bloglist").html(resultHtml);
 			pageInfo(data.pageNo,data.pageCount,data.type);
 	  }
+
+	/**获取慢生活界面json数据*/
+	function update3(resultHtml,data){
+		$.each(data.pageDate,function(index,element){
+			resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+			resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+			resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+			resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+			resultHtml+="</ul><div class='line'></div>";
+		});
+		resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+		$("#findshare").html(resultHtml);
+		pageInfo(data.pageNo,data.pageCount,data.type);
+    }
 
 	  
 	  

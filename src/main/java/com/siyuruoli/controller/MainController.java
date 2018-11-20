@@ -144,6 +144,35 @@ public class MainController {
         return "lifeDetails";
     }
 
+    /**
+     * 分页查询模板分享界面数据
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/findShare")
+    public PageInfo findShare(HttpServletRequest request){
+        Map<String,Object> map=new HashMap<>();
+        map.put("type",request.getParameter("type"));
+        map.put("pageNo",request.getParameter("pageNo"));
+        PageInfo list=mainService.findShare(map);
+        return list;
+    }
+    /**
+     * 查询模板分享详细界面数据
+     * @return
+     */
+    @RequestMapping("/findShareDetails")
+    public String findShareDetails(HttpServletRequest request,Model model){
+        Map<String,Object> map=new HashMap<>();
+        map.put("cid",request.getParameter("cid"));
+        PageInfo pageInfo=mainService.findShareDetails(map);
+        model.addAttribute("list",pageInfo.getPageDate().get(0));
+        model.addAttribute("newsdate",pageInfo.getNewsDate());
+        model.addAttribute("rankdate",pageInfo.getRankDate());
+        return "lifeDetails";
+    }
+
+
 
 
 }
