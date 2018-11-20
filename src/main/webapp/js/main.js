@@ -9,6 +9,9 @@ $("document").ready(function(){
         },
         success:function(data){
             var resultHtml = "";
+            var newsHtml = "";
+            var rankHtml = "";
+            /**生成页面数据*/
             $.each(data.pageDate,function(index,element){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
                 resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
@@ -17,7 +20,22 @@ $("document").ready(function(){
                 resultHtml+="</ul><div class='line'></div>";
             })
             resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            /**生成最新文章数据*/
+            $.each(data.newsDate,function(index,element){
+                newsHtml += "<li>";
+                newsHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                newsHtml += "</li>";
+            })
+            /**生成最新排行数据*/
+            $.each(data.rankDate,function(index,element){
+                rankHtml += "<li>";
+                rankHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                rankHtml += "</li>";
+            })
+
             $("#findLife").html(resultHtml);
+            $("#lifenewsdate").html(newsHtml);
+            $("#liferankdate").html(rankHtml);
             pageInfo(data.pageNo,data.pageCount,data.type);
         }
     })
@@ -34,10 +52,8 @@ $("document").ready(function(){
 		    "pageNo":"1"
 		},
 		success:function(data){
-			
 			var resultHtml = "";
 			$.each(data.pageDate,function(index,element){
-				
 				resultHtml+="<ul class='arrow_box'>";
 				resultHtml+="<div class='sy'>"+element.content;
 				resultHtml+=" </div>";
@@ -64,15 +80,16 @@ function queryLanMu(type) {
         },
         success:function(data){
             var resultHtml = "";
-            $("#findLife").html("");
-            $.each(data,function(index,element){
+            $.each(data.pageDate,function(index,element){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
                 resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
                 resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
-                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
             $("#findLife").html(resultHtml);
+            pageInfo(data.pageNo,data.pageCount,data.type);
         }
     })
 	
