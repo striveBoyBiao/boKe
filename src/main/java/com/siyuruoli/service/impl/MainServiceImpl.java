@@ -145,4 +145,55 @@ public class MainServiceImpl implements MainService{
         pageInfo.setRankDate(rankDate);
         return pageInfo;
     }
+
+    /**
+     * 查询模板分享界面数据
+     * @return
+     */
+    @Override
+    public PageInfo findLearn(Map<String, Object> map) {
+        PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
+        map.put("pageBegin",pageInfo.getPageBegin());
+        map.put("pageSize",pageInfo.getPageSize());
+        int rowCount=contentMapper.queryLearnCount(map);
+        int pageCount;
+        //计算总共多少页
+        if(rowCount%PageInfo.pageSize==0){
+            pageCount=rowCount/PageInfo.pageSize;
+        }else{
+            pageCount=rowCount/PageInfo.pageSize+1;
+        }
+        pageInfo.setPageCount(pageCount);
+        pageInfo.setType("4");
+        List<Map<String,Object>> list=contentMapper.findLearn(map);
+        map.put("news",0);
+        map.put("newslength",8);
+        map.put("rank",0);
+        map.put("ranklength",9);
+        List<Map<String,Object>> newsDate=contentMapper.findLearnNewsDate(map);
+        List<Map<String,Object>> rankDate=contentMapper.findLearnRankDate(map);
+        pageInfo.setPageDate(list);
+        pageInfo.setNewsDate(newsDate);
+        pageInfo.setRankDate(rankDate);
+        return pageInfo;
+    }
+    /**
+     * 查询模板分享详细界面数据
+     * @return
+     */
+    @Override
+    public PageInfo findLearnDetails(Map<String, Object> map) {
+        PageInfo pageInfo=new PageInfo("1");
+        map.put("news",0);
+        map.put("newslength",8);
+        map.put("rank",0);
+        map.put("ranklength",5);
+        List<Map<String,Object>> list=contentMapper.findLearnDetails(map);
+        List<Map<String,Object>> newsDate=contentMapper.findLearnNewsDate(map);
+        List<Map<String,Object>> rankDate=contentMapper.findLearnRankDate(map);
+        pageInfo.setPageDate(list);
+        pageInfo.setNewsDate(newsDate);
+        pageInfo.setRankDate(rankDate);
+        return pageInfo;
+    }
 }

@@ -85,20 +85,20 @@ $("document").ready(function(){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
                 resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
                 resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
-                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
             resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
             /**生成最新文章数据*/
             $.each(data.newsDate,function(index,element){
                 newsHtml += "<li>";
-                newsHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                newsHtml += "<a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
                 newsHtml += "</li>";
             })
             /**生成最新排行数据*/
             $.each(data.rankDate,function(index,element){
                 rankHtml += "<li>";
-                rankHtml += "<a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                rankHtml += "<a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
                 rankHtml += "</li>";
             })
 
@@ -112,8 +112,52 @@ $("document").ready(function(){
 
 
 
+/**初始化查询模板分享界面数据*/
+$("document").ready(function(){
+    $.ajax({
+        url:"/main/findLearn.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "pageNo":"1"
+        },
+        success:function(data){
+            var resultHtml = "";
+            var newsHtml = "";
+            var rankHtml = "";
+            /**生成页面数据*/
+            $.each(data.pageDate,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            /**生成最新文章数据*/
+            $.each(data.newsDate,function(index,element){
+                newsHtml += "<li>";
+                newsHtml += "<a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                newsHtml += "</li>";
+            })
+            /**生成最新排行数据*/
+            $.each(data.rankDate,function(index,element){
+                rankHtml += "<li>";
+                rankHtml += "<a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                rankHtml += "</li>";
+            })
 
-/**点击日记，欣赏，程序人生，经典语录等查询相对应数据*/
+            $("#findLearn").html(resultHtml);
+            $("#learnnewsdate").html(newsHtml);
+            $("#learnrankdate").html(rankHtml);
+            pageInfo(data.pageNo,data.pageCount,data.type);
+        }
+    })
+})
+
+
+
+/**点击慢生活--栏目导航--查询相对应数据*/
 function queryLanMu(type) {
     $.ajax({
         url:"/main/findLife.do" ,
@@ -140,6 +184,62 @@ function queryLanMu(type) {
 	
 }
 
+
+
+/**点击模板分享--栏目导航--查询相对应数据*/
+function queryShare(type) {
+    $.ajax({
+        url:"/main/findShare.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "pageNo":"1",
+            "type":type
+        },
+        success:function(data){
+            var resultHtml = "";
+            $.each(data.pageDate,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            $("#findshare").html(resultHtml);
+            pageInfo(data.pageNo,data.pageCount,data.type);
+        }
+    })
+
+}
+
+
+/**点击学无止境--栏目导航--查询相对应数据*/
+function queryLearn(type) {
+    $.ajax({
+        url:"/main/findLearn.do" ,
+        type:"post",
+        dataType:"json" ,
+        data:{
+            "pageNo":"1",
+            "type":type
+        },
+        success:function(data){
+            var resultHtml = "";
+            $.each(data.pageDate,function(index,element){
+                resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="</ul><div class='line'></div>";
+            })
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            $("#findLearn").html(resultHtml);
+            pageInfo(data.pageNo,data.pageCount,data.type);
+        }
+    })
+
+}
 
 
 
@@ -271,6 +371,22 @@ function queryLanMu(type) {
                     }
                 }
             });
+        }else if(type=='4'){
+            /**查询模板分享界面*/
+            $.ajax({
+                url:"/main/findLearn.do" ,
+                type:"post",
+                data:{
+                    "pageNo":pageNo
+                },
+                datatype:"json",
+                success:function(data){
+                    var resultHtml = "";
+                    if(data){
+                        update4(resultHtml,data);
+                    }
+                }
+            });
         }
 
 	 }
@@ -281,7 +397,7 @@ function queryLanMu(type) {
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
                 resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
                 resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
-                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+                resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
 			});
             resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
@@ -310,12 +426,26 @@ function queryLanMu(type) {
 			resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
 			resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
 			resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
-			resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"'target='_blank' class='readmore'>阅读全文&gt;&gt;</a>";
+			resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
 			resultHtml+="</ul><div class='line'></div>";
 		});
 		resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
 		$("#findshare").html(resultHtml);
 		pageInfo(data.pageNo,data.pageCount,data.type);
+    }
+
+    /**获取学无止境界面json数据*/
+    function update4(resultHtml,data){
+        $.each(data.pageDate,function(index,element){
+            resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+            resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+            resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+            resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+            resultHtml+="</ul><div class='line'></div>";
+        });
+        resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+        $("#findLearn").html(resultHtml);
+        pageInfo(data.pageNo,data.pageCount,data.type);
     }
 
 	  

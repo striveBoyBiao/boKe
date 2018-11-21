@@ -93,7 +93,7 @@
     </style>
     <title>学无止境 - 一个站在web前端设计之路的女技术员个人博客网站</title>
     <meta name="keywords" content="html5,div,css,个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="杨青个人博客网站,一个站在web前段设计之路的女技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的女技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/learn.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -101,7 +101,8 @@
     <![endif]-->
     <!-- 返回顶部调用 begin -->
     <link href="/css/lrtk.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link href="/css/bootstrap.min.css"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
@@ -127,8 +128,10 @@
 <article class="blogs">
     <h1 class="t_nav"><span>我们长路漫漫，只因学无止境。 </span><a href="/main/main.do" class="n1">网站首页</a>
         <a href="#" class="n2">学无止境</a></h1>
-    <div class="newblog left">
-        <h2><a title="三步实现滚动条触动css动画效果" href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html">三步实现滚动条触动css动画效果</a></h2>
+    <div class="newblog left" id="findLearn">
+
+
+     <%--   <h2><a title="三步实现滚动条触动css动画效果" href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html">三步实现滚动条触动css动画效果</a></h2>
         <p class="dateview"><span>发布时间：2017-08-08</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/jstt/css3/">css3</a>]</span></p>
         <figure>
             <a title="三步实现滚动条触动css动画效果" href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html"><img src="img/notimg.gif" alt="三步实现滚动条触动css动画效果"></a>
@@ -138,6 +141,8 @@
             <a title="三步实现滚动条触动css动画效果" href="/main/lenrnDetails.do" target="_blank" class="readmore">详细信息&gt;&gt;</a>
         </ul>
         <div class="line"></div>
+
+
         <h2><a title="【心路历程】请不要在设计这条路上徘徊啦" href="http://www.yangqq.com/jstt/bj/2017-07-13/784.html">【心路历程】请不要在设计这条路上徘徊啦</a></h2>
         <p class="dateview"><span>发布时间：2017-07-13</span><span>作者：</span><span>[<a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>]</span></p>
         <figure>
@@ -147,8 +152,12 @@
             <p> 我整理了一下网友给我的来信，如果你还在踌躇不前，不妨来看看，到底要不要坚持下去！我也欢迎大家给我来信，希望能帮到更多人。</p>
             <a title="【心路历程】请不要在设计这条路上徘徊啦" href="http://www.yangqq.com/jstt/bj/2017-07-13/784.html" target="_blank" class="readmore">详细信息&gt;&gt;</a>
         </ul>
-        <div class="line"></div>
-        <h2><a title="帝国cms首页、自定义页面如何实现分页" href="http://www.yangqq.com/jstt/web/2015-07-03/749.html">帝国cms首页、自定义页面如何实现分页</a></h2>
+        <div class="line"></div>--%>
+
+
+
+
+    <%--    <h2><a title="帝国cms首页、自定义页面如何实现分页" href="http://www.yangqq.com/jstt/web/2015-07-03/749.html">帝国cms首页、自定义页面如何实现分页</a></h2>
         <p class="dateview"><span>发布时间：2015-07-03</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/jstt/web/">网站建设</a>]</span></p>
         <figure>
             <a title="帝国cms首页、自定义页面如何实现分页" href="http://www.yangqq.com/jstt/web/2015-07-03/749.html"><img src="img/eac4a19833a725165124519f1a05aa80.png" alt="帝国cms首页、自定义页面如何实现分页"></a>
@@ -377,8 +386,8 @@
             <p>html5和css3流行至今，我在做响应式的网站一直是在“尝试”的阶段。并没有深入的去研究和学习，浅显的理解就是根据屏幕分辨率的大小，网站布局、图片、文字大小等相应改变。以后使用平板、手机浏览网站的用户会越来越多，对于前端设计师，学号用html5、css3做响应式网站是势在必行。</p>
             <a title="关于响应式Web设计技巧以及入门" href="http://www.yangqq.com/jstt/css3/2014-05-12/664.html" target="_blank" class="readmore">详细信息&gt;&gt;</a>
         </ul>
-        <div class="line"></div>
-        <div class="blank"></div>
+        <div class="line"></div>--%>
+     <%--   <div class="blank"></div>
         <div class="page">
             <a title="Total record"><b>138</b> </a><b>1</b>
             <a href="http://www.yangqq.com/jstt/index_2.html">2</a>
@@ -388,7 +397,8 @@
             <a href="http://www.yangqq.com/jstt/index_6.html">6</a>
             <a href="http://www.yangqq.com/jstt/index_2.html">&gt;</a>
             <a href="http://www.yangqq.com/jstt/index_6.html">&gt;&gt;</a>
-        </div>
+        </div>--%>
+        <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
     </div>
     <aside class="right">
         <script type="text/javascript">
@@ -412,27 +422,27 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>
+                    <a href="#" onclick="queryLearn('10')">心得笔记</a>
                 </li>
 
                 <li>
-                    <a href="http://www.ip3q.com/">IP查询</a>
+                    <a href="#" onclick="queryLearn('11')">IP查询</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/css3/">CSS3|Html5</a>
+                    <a href="#" onclick="queryLearn('12')">CSS3|Html5</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/web/">网站建设</a>
+                    <a href="#" onclick="queryLearn('13')">网站建设</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/news/jsex/">JS经典实例</a>
+                    <a href="#" onclick="queryLearn('14')">JS经典实例</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/t/">推荐工具</a>
+                    <a href="#" onclick="queryLearn('15')">推荐工具</a>
                 </li>
             </ul>
         </div>
@@ -441,27 +451,27 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>
+                    <a href="#" onclick="queryLearn('10')">心得笔记</a>
                 </li>
 
                 <li>
-                    <a href="http://www.ip3q.com/">IP查询</a>
+                    <a href="#" onclick="queryLearn('11')">IP查询</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/css3/">CSS3|Html5</a>
+                    <a href="#" onclick="queryLearn('12')">CSS3|Html5</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/web/">网站建设</a>
+                    <a href="#" onclick="queryLearn('13')">网站建设</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/news/jsex/">JS经典实例</a>
+                    <a href="#" onclick="queryLearn('14')">JS经典实例</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/t/">推荐工具</a>
+                    <a href="#" onclick="queryLearn('15')">推荐工具</a>
                 </li>
             </ul>
         </div>
@@ -470,8 +480,8 @@
             <h3>
                 <p>最新<span>模板</span></p>
             </h3>
-            <ul class="rank">
-                <li>
+            <ul class="rank" id="learnnewsdate">
+              <%--  <li>
                     <a href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html" title="三步实现滚动条触动css动画效果" target="_blank">三步实现滚动条触动css动画效果</a>
                 </li>
                 <li>
@@ -494,13 +504,13 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/jstt/web/2014-12-18/736.html" title="2014年度优秀个人博客评选活动" target="_blank">2014年度优秀个人博客评选活动</a>
-                </li>
+                </li>--%>
             </ul>
             <h3 class="ph">
                 <p>点击<span>排行</span></p>
             </h3>
-            <ul class="paih">
-                <li>
+            <ul class="paih" id="learnrankdate">
+              <%--  <li>
                     <a href="http://www.yangqq.com/jstt/bj/2015-01-09/740.html" title="【匆匆那些年】总结个人博客经历的这四年…" target="_blank">【匆匆那些年】总结个人博客经历的这四年…</a>
                 </li>
                 <li>
@@ -526,7 +536,7 @@
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/jstt/bj/2015-02-14/744.html" title="【郑重申明】本站只提供静态模板下载！" target="_blank">【郑重申明】本站只提供静态模板下载！</a>
-                </li>
+                </li>--%>
             </ul>
         </div>
         <script type="text/javascript">
@@ -585,7 +595,9 @@
     var cpro_id = "u2896052";
 </script>
 <script type="text/javascript" src="/js/i.js"></script>
-
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<!--初始化js -->
+<script type="text/javascript" src="/js/main.js"></script>
 </body>
 
 </html>

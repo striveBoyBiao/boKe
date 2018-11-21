@@ -427,19 +427,19 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/div/">个人博客模板</a>
+                    <a href="#" onclick="queryShare('6')">个人博客模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/free/">国外html5模板</a>
+                    <a href="#" onclick="queryShare('7')">国外html5模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/newsfree/">企业网站模板</a>
+                    <a href="#" onclick="queryShare('8')">企业网站模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/case/">作品展示</a>
+                    <a href="#" onclick="queryShare('9')">作品展示</a>
                 </li>
             </ul>
         </div>
@@ -448,19 +448,19 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/div/">个人博客模板</a>
+                    <a href="#" onclick="queryShare('6')">个人博客模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/free/">国外html5模板</a>
+                    <a href="#" onclick="queryShare('7')">国外html5模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/newsfree/">企业网站模板</a>
+                    <a href="#" onclick="queryShare('8')">企业网站模板</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/download/case/">作品展示</a>
+                    <a href="#" onclick="queryShare('9')">作品展示</a>
                 </li>
             </ul>
         </div>

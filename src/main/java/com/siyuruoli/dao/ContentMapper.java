@@ -17,6 +17,8 @@ public interface ContentMapper {
         List<Map<String,Object>> findlifeDetails(Map<String,Object> map);
         List<Map<String,Object>> findShare(Map<String,Object> map);
         List<Map<String,Object>> findShareDetails(Map<String,Object> map);
+        List<Map<String,Object>> findLearn(Map<String,Object> map);
+        List<Map<String,Object>> findLearnDetails(Map<String,Object> map);
         int queryCount(Map<String,Object> map);
         /**查询慢生活数据数量*/
         int queryLifeCount(Map<String,Object> map);
@@ -30,4 +32,10 @@ public interface ContentMapper {
         List<Map<String,Object>> findShareNewsDate(Map<String,Object> map);
         /**查询模板分享最新排行*/
         List<Map<String,Object>> findShareRankDate(Map<String,Object> map);
+        /**查询学无止境数据数量*/
+        int queryLearnCount(Map<String,Object> map);
+        /**查询学无止境最新文章*/
+        List<Map<String,Object>> findLearnNewsDate(Map<String,Object> map);
+        /**查询学无止境最新排行*/
+        List<Map<String,Object>> findLearnRankDate(Map<String,Object> map);
 }

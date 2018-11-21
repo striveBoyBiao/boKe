@@ -1,6 +1,5 @@
 package com.siyuruoli.controller;
 
-import com.siyuruoli.model.ContentDO;
 import com.siyuruoli.service.MainService;
 import com.siyuruoli.utils.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -100,7 +98,7 @@ public class MainController {
      */
     @RequestMapping("/lenrnDetails")
     public String lenrnDetails(){
-        return "lenrnDetails";
+        return "learnDetails-1";
     }
 
     /**
@@ -169,7 +167,36 @@ public class MainController {
         model.addAttribute("list",pageInfo.getPageDate().get(0));
         model.addAttribute("newsdate",pageInfo.getNewsDate());
         model.addAttribute("rankdate",pageInfo.getRankDate());
-        return "lifeDetails";
+        return "shareDetails";
+    }
+
+
+    /**
+     * 分页查询学无止境界面数据
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/findLearn")
+    public PageInfo findLearn(HttpServletRequest request){
+        Map<String,Object> map=new HashMap<>();
+        map.put("type",request.getParameter("type"));
+        map.put("pageNo",request.getParameter("pageNo"));
+        PageInfo list=mainService.findLearn(map);
+        return list;
+    }
+    /**
+     * 查询学无止境详细界面数据
+     * @return
+     */
+    @RequestMapping("/findLearnDetails")
+    public String findLearnDetails(HttpServletRequest request,Model model){
+        Map<String,Object> map=new HashMap<>();
+        map.put("cid",request.getParameter("cid"));
+        PageInfo pageInfo=mainService.findLearnDetails(map);
+        model.addAttribute("list",pageInfo.getPageDate().get(0));
+        model.addAttribute("newsdate",pageInfo.getNewsDate());
+        model.addAttribute("rankdate",pageInfo.getRankDate());
+        return "learnDetails-1";
     }
 
 

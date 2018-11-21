@@ -35,5 +35,14 @@ public interface MainService {
      * @return
      */
     public PageInfo findShareDetails(Map<String,Object> map);
-
+    /**
+     * 分页查询学无止境界面数据
+     * @return
+     */
+    public PageInfo findLearn(Map<String,Object> map);
+    /**
+     * 查询学无止境界面数据
+     * @return
+     */
+    public PageInfo findLearnDetails(Map<String,Object> map);
 }
