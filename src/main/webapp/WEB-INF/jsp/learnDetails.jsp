@@ -49,7 +49,7 @@
 
 </header>
 <article class="blogs">
-    <h1 class="t_nav"><span>您当前的位置：<a href="/main/main.do">首页</a>&nbsp;&gt;&nbsp;<a href="/main/life.do">慢生活
+    <h1 class="t_nav"><span>您当前的位置：<a href="/main/main.do">首页</a>&nbsp;&gt;&nbsp;<a href="/main/life.do">学无止境
     </a>&nbsp;&gt;&nbsp;<a href="#">${list.typename}</a></span><a href="/main/main.do" class="n1">网站首页</a><a
         href="#" class="n2">${list.typename}</a></h1>
     <div class="index_about">
@@ -119,27 +119,27 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>
+                    <a href="/main/learn.do ">心得笔记</a>
                 </li>
 
                 <li>
-                    <a href="http://www.ip3q.com/">IP查询</a>
+                    <a href="/main/learn.do" >IP查询</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/css3/">CSS3|Html5</a>
+                    <a href="/main/learn.do" >CSS3|Html5</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/web/">网站建设</a>
+                    <a href="/main/learn.do" >网站建设</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/news/jsex/">JS经典实例</a>
+                    <a href="/main/learn.do" >JS经典实例</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/t/">推荐工具</a>
+                    <a href="/main/learn.do" >推荐工具</a>
                 </li>
             </ul>
         </div>
@@ -148,27 +148,27 @@
             <ul>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>
+                    <a href="/main/learn.do ">心得笔记</a>
                 </li>
 
                 <li>
-                    <a href="http://www.ip3q.com/">IP查询</a>
+                    <a href="/main/learn.do" >IP查询</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/css3/">CSS3|Html5</a>
+                    <a href="/main/learn.do" >CSS3|Html5</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/web/">网站建设</a>
+                    <a href="/main/learn.do" >网站建设</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/news/jsex/">JS经典实例</a>
+                    <a href="/main/learn.do" >JS经典实例</a>
                 </li>
 
                 <li>
-                    <a href="http://www.yangqq.com/jstt/t/">推荐工具</a>
+                    <a href="/main/learn.do" >推荐工具</a>
                 </li>
             </ul>
         </div>

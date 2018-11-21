@@ -152,6 +152,7 @@ public class MainController {
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
         map.put("pageNo",request.getParameter("pageNo"));
+        map.put("search",request.getParameter("search"));
         PageInfo list=mainService.findShare(map);
         return list;
     }
@@ -181,6 +182,7 @@ public class MainController {
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
         map.put("pageNo",request.getParameter("pageNo"));
+        map.put("search",request.getParameter("search"));
         PageInfo list=mainService.findLearn(map);
         return list;
     }
@@ -196,7 +198,7 @@ public class MainController {
         model.addAttribute("list",pageInfo.getPageDate().get(0));
         model.addAttribute("newsdate",pageInfo.getNewsDate());
         model.addAttribute("rankdate",pageInfo.getRankDate());
-        return "learnDetails-1";
+        return "learnDetails";
     }
 
 

@@ -19,7 +19,9 @@ $("document").ready(function(){
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             /**生成最新文章数据*/
             $.each(data.newsDate,function(index,element){
                 newsHtml += "<li>";
@@ -88,7 +90,9 @@ $("document").ready(function(){
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             /**生成最新文章数据*/
             $.each(data.newsDate,function(index,element){
                 newsHtml += "<li>";
@@ -112,7 +116,7 @@ $("document").ready(function(){
 
 
 
-/**初始化查询模板分享界面数据*/
+/**初始化查询学无止境界面数据*/
 $("document").ready(function(){
     $.ajax({
         url:"/main/findLearn.do" ,
@@ -133,7 +137,9 @@ $("document").ready(function(){
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             /**生成最新文章数据*/
             $.each(data.newsDate,function(index,element){
                 newsHtml += "<li>";
@@ -176,7 +182,9 @@ function queryLanMu(type) {
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             $("#findLife").html(resultHtml);
             pageInfo(data.pageNo,data.pageCount,data.type);
         }
@@ -205,7 +213,9 @@ function queryShare(type) {
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             $("#findshare").html(resultHtml);
             pageInfo(data.pageNo,data.pageCount,data.type);
         }
@@ -233,7 +243,9 @@ function queryLearn(type) {
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
             $("#findLearn").html(resultHtml);
             pageInfo(data.pageNo,data.pageCount,data.type);
         }
@@ -241,6 +253,102 @@ function queryLearn(type) {
 
 }
 
+
+/**搜索*/
+function search(type) {
+    var str=$("#bdcs-search-form-input").val();
+    /*查询模板分享*/
+    if(type=='3'){
+        $.ajax({
+            url:"/main/findShare.do" ,
+            type:"post",
+            dataType:"json" ,
+            data:{
+                "pageNo":"1",
+                "search":str
+            },
+            success:function(data){
+                var resultHtml = "";
+                var newsHtml = "";
+                var rankHtml = "";
+                /**生成页面数据*/
+                $.each(data.pageDate,function(index,element){
+                    resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                    resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                    resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                    resultHtml+="<ul class='nlist'><p></p><a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                    resultHtml+="</ul><div class='line'></div>";
+                })
+                if(resultHtml!=''){
+                    resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+                }
+                /**生成最新文章数据*/
+                $.each(data.newsDate,function(index,element){
+                    newsHtml += "<li>";
+                    newsHtml += "<a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                    newsHtml += "</li>";
+                })
+                /**生成最新排行数据*/
+                $.each(data.rankDate,function(index,element){
+                    rankHtml += "<li>";
+                    rankHtml += "<a href='/main/findShareDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                    rankHtml += "</li>";
+                })
+
+                $("#findshare").html(resultHtml);
+                $("#sharenewsdate").html(newsHtml);
+                $("#sharerankdate").html(rankHtml);
+                pageInfo(data.pageNo,data.pageCount,data.type);
+            }
+        })
+
+    }else if(type=='4'){
+        /*查询学无止境*/
+        $.ajax({
+            url:"/main/findLearn.do" ,
+            type:"post",
+            dataType:"json" ,
+            data:{
+                "pageNo":"1",
+                "search":str
+            },
+            success:function(data){
+                var resultHtml = "";
+                var newsHtml = "";
+                var rankHtml = "";
+                /**生成页面数据*/
+                $.each(data.pageDate,function(index,element){
+                    resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
+                    resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
+                    resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                    resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
+                    resultHtml+="</ul><div class='line'></div>";
+                })
+                if(resultHtml!=''){
+                    resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+                }
+                /**生成最新文章数据*/
+                $.each(data.newsDate,function(index,element){
+                    newsHtml += "<li>";
+                    newsHtml += "<a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                    newsHtml += "</li>";
+                })
+                /**生成最新排行数据*/
+                $.each(data.rankDate,function(index,element){
+                    rankHtml += "<li>";
+                    rankHtml += "<a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' >"+element.title+"</a>";
+                    rankHtml += "</li>";
+                })
+
+                $("#findLearn").html(resultHtml);
+                $("#learnnewsdate").html(newsHtml);
+                $("#learnrankdate").html(rankHtml);
+                pageInfo(data.pageNo,data.pageCount,data.type);
+            }
+        })
+    }
+    
+}
 
 
 
@@ -250,7 +358,7 @@ function queryLearn(type) {
 
   /**-------------------------------------------动态创建 分页------------------------------------------------------------*/
 	   function pageInfo(pageNo,pageCount,type){
-		   pageNo = parseInt(pageNo,"10");
+		  // pageNo = parseInt(pageNo,"10");
 	 		var result="";
 	 		result+="<nav>";
 	 		result+="<ul class='pagination'>";
@@ -400,7 +508,9 @@ function queryLearn(type) {
                 resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
 			});
-            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            if(resultHtml!=''){
+                resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+            }
 			$("#findLife").html(resultHtml);
 			pageInfo(data.pageNo,data.pageCount,data.type);
 		}
@@ -429,7 +539,9 @@ function queryLearn(type) {
 			resultHtml+="<ul class='nlist'><p></p><a href='/main/findlifeDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
 			resultHtml+="</ul><div class='line'></div>";
 		});
-		resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+        if(resultHtml!=''){
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+        }
 		$("#findshare").html(resultHtml);
 		pageInfo(data.pageNo,data.pageCount,data.type);
     }
@@ -443,87 +555,10 @@ function queryLearn(type) {
             resultHtml+="<ul class='nlist'><p></p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
             resultHtml+="</ul><div class='line'></div>";
         });
-        resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+        if(resultHtml!=''){
+            resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
+        }
         $("#findLearn").html(resultHtml);
         pageInfo(data.pageNo,data.pageCount,data.type);
     }
-
-	  
-	  
-	  
-	  /*模糊查询   */
-	  // function mohuSearch(){
-		//
-		// var state=$("#bind").html();
-	  // 	var mh=document.getElementById("mh").value;
-	  //
-	  // 	$.ajax({
-	  // 		url:"/Survey/console/kongzhitai3.shtml" ,
-	  // 		type:"post",
-	  // 		data:{
-	  // 			"state":state,
-	  // 			"mohu":mh
-	  // 		},
-	  // 		datatype:"json",
-	  // 		success:function(data){
-	  // 			var resultHtml = "";
-	  // 	  		if(data){
-	  //
-	  // 	  			update2(resultHtml,data);
-	  //
-	  // 	  		}
-	  // 		}
-	  // 	});
-	  // }
-	   
-	  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function change(){
-	
-	$(".ng-hide").css("display","");
-	
-}
-
-function change1(){
-	$("#bind").html("全部状态");
-	$(".ng-hide").css("display","none");
-	
-}
-function change2(){
-	$("#bind").html("发布中");
-	$(".ng-hide").css("display","none");
-	
-}
-function change3(){
-	$("#bind").html("已完成");
-	$(".ng-hide").css("display","none");
-	
-}
-
-
-
-
-
-
-
-
-
-
-
 

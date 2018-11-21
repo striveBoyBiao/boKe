@@ -4,6 +4,7 @@ import com.siyuruoli.dao.ContentMapper;
 import com.siyuruoli.model.ContentDO;
 import com.siyuruoli.service.MainService;
 import com.siyuruoli.utils.PageInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -104,6 +105,10 @@ public class MainServiceImpl implements MainService{
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
         map.put("pageBegin",pageInfo.getPageBegin());
         map.put("pageSize",pageInfo.getPageSize());
+        String search=map.get("search")==null?"":map.get("search").toString();
+        if(StringUtils.isNotEmpty(search)){
+            map.put("search","%"+search+"%");
+        }
         int rowCount=contentMapper.queryShareCount(map);
         int pageCount;
         //计算总共多少页
@@ -147,7 +152,7 @@ public class MainServiceImpl implements MainService{
     }
 
     /**
-     * 查询模板分享界面数据
+     * 查询学无止境界面数据
      * @return
      */
     @Override
@@ -155,6 +160,10 @@ public class MainServiceImpl implements MainService{
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
         map.put("pageBegin",pageInfo.getPageBegin());
         map.put("pageSize",pageInfo.getPageSize());
+        String search=map.get("search")==null?"":map.get("search").toString();
+        if(StringUtils.isNotEmpty(search)){
+            map.put("search","%"+search+"%");
+        }
         int rowCount=contentMapper.queryLearnCount(map);
         int pageCount;
         //计算总共多少页
@@ -178,7 +187,7 @@ public class MainServiceImpl implements MainService{
         return pageInfo;
     }
     /**
-     * 查询模板分享详细界面数据
+     * 查询学无止境详细界面数据
      * @return
      */
     @Override

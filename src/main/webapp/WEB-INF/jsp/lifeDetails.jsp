@@ -167,27 +167,8 @@
                             <a href='/main/findlifeDetails.do?cid=${news.cid}' title='${news.title}' >${news.title}</a>
                         </li>
                   </c:forEach>
-              <%--  </c:if>--%>
              <%--   <li>
                     <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-06-14/690.html" title="伪球迷看世界杯" target="_blank">伪球迷看世界杯</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-04-09/660.html" title="犯错了怎么办？" target="_blank">犯错了怎么办？</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-03-12/653.html" title="春暖花开-走走停停-发现美" target="_blank">春暖花开-走走停停-发现美</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-29/648.html" title="简单手工纸玫瑰" target="_blank">简单手工纸玫瑰</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-08/635.html" title="个人博客从简不繁" target="_blank">个人博客从简不繁</a>
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/news/s/2014-01-04/634.html" title="云南之行——丽江古镇玉龙雪山" target="_blank">云南之行——丽江古镇玉龙雪山</a>
@@ -204,15 +185,6 @@
                 </c:forEach>
               <%--  <li>
                     <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-08/635.html" title="个人博客从简不繁" target="_blank">个人博客从简不繁</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-04-09/660.html" title="犯错了怎么办？" target="_blank">犯错了怎么办？</a>
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/news/s/2014-01-04/632.html" title="云南之行——初到昆明滇池半日游" target="_blank">云南之行——初到昆明滇池半日游</a>

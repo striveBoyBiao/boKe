@@ -13,7 +13,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>柴米油盐的生活才是真实 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="生活,婚礼">
     <meta name="description" content="柴米油盐的生活才是真实">
     <link href="/css/base.css" rel="stylesheet">
@@ -49,7 +49,7 @@
 
 </header>
 <article class="blogs">
-    <h1 class="t_nav"><span>您当前的位置：<a href="/main/main.do">首页</a>&nbsp;&gt;&nbsp;<a href="/main/life.do">慢生活
+    <h1 class="t_nav"><span>您当前的位置：<a href="/main/main.do">首页</a>&nbsp;&gt;&nbsp;<a href="/main/life.do">模板分享
     </a>&nbsp;&gt;&nbsp;<a href="#">${list.typename}</a></span><a href="/main/main.do" class="n1">网站首页</a><a
         href="#" class="n2">${list.typename}</a></h1>
     <div class="index_about">

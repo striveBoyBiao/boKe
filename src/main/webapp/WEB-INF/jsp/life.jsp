@@ -90,7 +90,7 @@
             <a href="http://www.yangqq.com/news/index_5.html">&gt;&gt;</a>
         </div>--%>
 
-                 <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
+              <%--   <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>--%>
          </div>
     <aside class="right">
         <div class="rnav">
