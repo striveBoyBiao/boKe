@@ -9,9 +9,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>回忆-情侣博客模板</title>
-    <meta name="Keywords" content="博客模板,情侣博客模板" >
-    <meta name="Description" content="情侣博客模板" >
+    <title>回忆-情侣博客</title>
+    <meta name="Keywords" content="博客模板,情侣博客" >
+    <meta name="Description" content="情侣博客" >
     <link href="/css/index.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="/js/modernizr.js"></script>

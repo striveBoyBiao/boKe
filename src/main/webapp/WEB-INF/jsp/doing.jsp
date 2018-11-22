@@ -12,9 +12,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <title>碎言碎语 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>碎言碎语 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="杨青个人博客网站,一个站在web前段设计之路的女技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/mood.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -75,7 +75,7 @@
         <a href="http://www.yangqq.com/newstalk/index_2.html">&gt;</a>
         <a href="http://www.yangqq.com/newstalk/index_7.html">&gt;&gt;</a>
     </div>--%>
-    <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>
+    <div style='width: 600px;margin-right:50%;' id='footer'></div>
 </div>
 <div id="tbox">
     <a id="togbook" href="/main/doing.do"></a>
@@ -98,7 +98,7 @@
 <script type="text/javascript" src="/js/i.js"></script>
 <!--初始化js -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/doing.js"></script>
 </body>
 
 </html>

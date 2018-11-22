@@ -13,9 +13,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>${list.title} - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="生活,婚礼">
-    <meta name="description" content="柴米油盐的生活才是真实">
+    <meta name="description" content="${list.title}">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/new.css" rel="stylesheet">
     <link href="/css/changyan.css" rel="stylesheet">
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-<div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./慢生活- 柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+<div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./${list.title} - 一个站在web前端设计之路的男技术员个人博客网站_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
 <header>
     <div id="logo">
         <a href="/main/main.do"></a>
@@ -56,7 +56,7 @@
 
 
         <h2 class="c_titile">${list.title}</h2>
-        <p class="box_c"><span class="d_time">发布时间：${list.gtmcreate}</span><span>编辑：<a href="mailto:1169763240@qq.com">${list.author}</a></span><span>阅读（<script src="./慢生活- 柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站_files/saved_resource"></script>3604）</span></p>
+        <p class="box_c"><span class="d_time">发布时间：${list.gtmcreate}</span><span>编辑：<a href="mailto:1169763240@qq.com">${list.author}</a></span><span>阅读（<script src="./慢生活- ${list.title} - 一个站在web前端设计之路的女技术员个人博客网站_files/saved_resource"></script>3604）</span></p>
         <ul class="infos">
             <%--<p>从十月一就开始忙碌，网站也这么长的时间没有更新，但是访问IP每天还有增无减。虽然5号的婚礼前后很多琐事都没让我操心，但也着实累着了。每每看到电视里女主角憧憬婚礼的场景，还有我周围的朋友们七嘴八舌的谈论理想中的婚礼。我都感觉这对我来说并不重要。就拿我们的婚礼来说，跟司仪沟通的时候就直接说，一切从简，越简单越好，婚礼不过就是一个仪式，婚礼上的誓言就是主持人给我们的一句台词，我们俩成了这台词的演员。两个人最浪漫的时刻却在平平淡淡的生活中....</p>--%>
             ${list.content}

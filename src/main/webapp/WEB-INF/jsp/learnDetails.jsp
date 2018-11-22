@@ -13,7 +13,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>${list.title} - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="生活,婚礼">
     <meta name="description" content="柴米油盐的生活才是真实">
     <link href="/css/base.css" rel="stylesheet">
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-<div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./慢生活- 柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+<div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./慢生活- ${list.title} - 一个站在web前端设计之路的女技术员个人博客网站_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
 <header>
     <div id="logo">
         <a href="/main/main.do"></a>

@@ -91,9 +91,9 @@
             text-align: center;
             width: 50px; //_overflow:hidden}.bdcs-container .bdcs-search-form-submit-magnifier{width:45px;padding:0;text-indent:-999em;overflow:hidden;background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon.png) no-repeat center center;_background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon_ie6.png) no-repeat center center}div#default-searchbox .default-channel-meun{position:relative;width:75px;display:inline-block;vertical-align:middle;cursor:pointer;background:#fff;float:left;overflow:visible}div#default-searchbox .default-channel-current{border:1px solid;position:relative;width:100%;border-right:0}div#default-searchbox .default-channel-current span{margin-left:8px}div#default-searchbox .default-channel-current i{overflow:hidden;width:0;height:0;border-width:6px 6px 0;border-color:#9E9E9E #fff;border-style:solid;display:block;position:absolute;right:10px;top:11px}div.cse-default-channel-container{display:block;position:absolute;z-index:30061000000}div.cse-default-channel-container .default-channel-list{display:none;width:99%;list-style:none;background:#fff;border:1px solid #DDD;border-top:0;margin:0;padding:0}div.cse-default-channel-container .default-channel-list li{background:0 0;line-height:24px;list-style:none;display:block;padding-left:7px;cursor:pointer}div.cse-default-channel-container .default-channel-list li:hover{background:#DDD}.bdcs-container .bdcs-search-form-input-wrap{}.bdcs-container .bdcs-search-form-input-notspan{margin-left:0px;font-family:Arial,SimSun,sans-serif;color:#a6a6a6;font-size:14px;}.bdcs-container .bdcs-search-form-input .icon-nofocus{left:;right:;top:;height:;width:;}.bdcs-container .bdcs-search{width:auto;height:30px;overflow:visible;border-color:#ffffff;border-radius:0px;border-width:0px;box-shadow:none;background-color:none;}.bdcs-container .bdcs-search-form-input{border-color:#a6a6a6;margin-right:10px;width:188px;height:28px;line-height:28px;font-family:Arial,SimSun,sans-serif;color:#a6a6a6;font-size:14px;border-radius:0px;background-color:#FFFFFF;}.bdcs-container .bdcs-search-form-input:focus{border-color:#f79646;}.bdcs-container .bdcs-search-form-submit-wrap{}.bdcs-container .bdcs-search-form-submit{border-color:#76923c;height:28px;width:50px;background-color:#9bbb59;color:#ffffff;font-family:Arial,SimSun,sans-serif;font-size:14px;border-radius:0px;}.bdcs-container .bdcs-search-form-submit{*height:30px;*margin-top:1px;}.bdcs-container .bdcs-search-form-submit{line-height:28px;}#bdcs-rec{display:none;}
     </style>
-    <title>学无止境 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <title>学无止境 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="html5,div,css,个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的女技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/learn.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -334,7 +334,7 @@
 <script type="text/javascript" src="/js/i.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <!--初始化js -->
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/learn.js"></script>
 </body>
 
 </html>

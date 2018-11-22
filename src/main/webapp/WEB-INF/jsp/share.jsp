@@ -315,7 +315,7 @@
 <script type="text/javascript" src="/js/i.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <!--初始化js -->
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/share.js"></script>
 </body>
 
 </html>
