@@ -71,7 +71,7 @@
         </ul>--%>
 
         <div class="keybq">
-            <p><span>关键字词</span>：生活,婚礼</p>
+            <p><span>关键字词</span>：${list.gjzc}</p>
         </div>
 
         <div class="nextinfo">

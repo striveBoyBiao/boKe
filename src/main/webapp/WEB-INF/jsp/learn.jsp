@@ -185,7 +185,7 @@
                             <input type="hidden" name="entry" value="1">
                             <input type="hidden" name="ie" value="gbk">
                             <input type="text" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" placeholder="请输入关键词" style="height: 28px; line-height: 28px;">
-                            <input type="button" class="bdcs-search-form-submit " id="bdcs-search-form-submit" value="搜索" onclick="search('4')">
+                            <input type="button" class="bdcs-search-form-submit " id="bdcs-search-form-submit" value="搜索" onclick="search()">
                         </form>
                     </div>
                 </div>
