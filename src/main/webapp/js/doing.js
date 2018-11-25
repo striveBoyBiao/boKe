@@ -26,6 +26,7 @@ $("document").ready(function(){
 
   /**-------------------------------------------动态创建 分页------------------------------------------------------------*/
   function pageInfo(pageNo,pageCount){
+      pageNo = parseInt(pageNo,"10");
       var result="";
       result+="<nav>";
       result+="<ul class='pagination'>";

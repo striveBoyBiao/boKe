@@ -17,6 +17,11 @@
         FROM BLOG_CONTENT BC
         WHERE BC.CATEGORIES='5'
     </select>
+
+
+
+
+
     <!--查询慢生活数据数量-->
     <select id="queryLifeCount" parameterType="Map" resultType="int">
         SELECT count(*)
@@ -24,8 +29,6 @@
         WHERE BC.CATEGORIES in ('1','2','3','4')
         <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
     </select>
-
-
     <!--分页查询慢生活界面数据-->
     <select id="findLife" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
         SELECT BC.CID,
@@ -61,6 +64,15 @@
         order by BC.COMMENTS_NUM desc
         LIMIT #{rank},#{ranklength}
     </select>
+    <!--查询慢生活相关文章-->
+    <select id="findLifeRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+        BC.TITLE
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('1','2','3','4')
+        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
+         LIMIT #{news},#{newslength}
+    </select>
 
     <!--查询慢生活详细界面数据-->
     <select id="findlifeDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
@@ -70,7 +82,8 @@
                 BC.TITLE,
                 SD.NAME TYPENAME,
                 BC.AUTHOR,
-                BC.GJZC
+                BC.GJZC,
+                BC.READING
         FROM BLOG_CONTENT BC
         left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
         WHERE BC.CATEGORIES in ('1','2','3','4')
@@ -109,7 +122,8 @@
                 BC.TITLE,
                 SD.NAME TYPENAME,
                 BC.AUTHOR,
-                BC.GJZC
+                BC.GJZC,
+                BC.READING
         FROM BLOG_CONTENT BC
         left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
         WHERE BC.CATEGORIES in ('6','7','8','9')
@@ -142,7 +156,15 @@
         order by BC.COMMENTS_NUM desc
         LIMIT #{rank},#{ranklength}
     </select>
-
+    <!--查询模板分享相关文章-->
+    <select id="findShareRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+                BC.TITLE
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('6','7','8','9')
+        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
+         LIMIT #{news},#{newslength}
+    </select>
 
 
 
@@ -173,7 +195,8 @@
                 BC.TITLE,
                 SD.NAME TYPENAME,
                 BC.AUTHOR,
-                BC.GJZC
+                BC.GJZC,
+                BC.READING
         FROM BLOG_CONTENT BC
         left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
         WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
@@ -206,4 +229,42 @@
         order by BC.COMMENTS_NUM desc
         LIMIT #{rank},#{ranklength}
     </select>
+    <!--查询学无止境相关文章-->
+    <select id="findLearnRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+                BC.TITLE
+        FROM BLOG_CONTENT BC
+        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
+        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
+         LIMIT #{news},#{newslength}
+    </select>
+
+    <!--查询上一篇-->
+    <select id="findLifeOnDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+                BC.TITLE
+        FROM BLOG_CONTENT BC
+        WHERE 1=1
+         <if test="lb==1">AND BC.CATEGORIES in ('1','2','3','4')</if>
+         <if test="lb==2">AND BC.CATEGORIES in ('6','7','8','9')</if>
+         <if test="lb==3">AND BC.CATEGORIES in ('10','11','12','13','14','15')</if>
+        AND #{cid}>BC.CID order by BC.CID desc LIMIT 1 ;
+    </select>
+    <!--查询下一篇-->
+    <select id="findLifeUnderDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
+        SELECT BC.CID,
+                BC.TITLE
+        FROM BLOG_CONTENT BC
+        WHERE 1=1
+        <if test="lb==1">AND BC.CATEGORIES in ('1','2','3','4')</if>
+        <if test="lb==2">AND BC.CATEGORIES in ('6','7','8','9')</if>
+        <if test="lb==3">AND BC.CATEGORIES in ('10','11','12','13','14','15')</if>
+        AND BC.CID>#{cid} order by BC.CID asc LIMIT 1 ;
+    </select>
+
+    <update id="updateClickRate" parameterType="Map">
+        update BLOG_CONTENT set reading=reading+1 where cid=#{cid}
+    </update>
+
+
 </mapper>

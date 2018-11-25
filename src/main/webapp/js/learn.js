@@ -14,12 +14,12 @@ $("document").ready(function(){
             /**生成页面数据*/
             $.each(data.pageDate,function(index,element){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
-                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
-                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='/main/findLearnDetails.do?cid="+element.cid+"'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='/main/findLearnDetails.do?cid="+element.cid+"'><img src='"+element.titlepicture+"' alt='"+element.title+"'></a></figure>";
                 resultHtml+="<ul class='nlist'><p>"+element.introduction+"</p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            if(resultHtml!=''){
+            if(resultHtml!='' && data.pageCount!=1){
                 resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
             }
             /**生成最新文章数据*/
@@ -58,12 +58,12 @@ function queryLearn(type) {
             var resultHtml = "";
             $.each(data.pageDate,function(index,element){
                 resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
-                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
-                resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='/main/findLearnDetails.do?cid="+element.cid+"'>"+element.typename+"</a>]</span></p>";
+                resultHtml+="<figure><a title='"+element.title+"' href='/main/findLearnDetails.do?cid="+element.cid+"'><img src='"+element.titlepicture+"' alt='"+element.title+"'></a></figure>";
                 resultHtml+="<ul class='nlist'><p>"+element.introduction+"</p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                 resultHtml+="</ul><div class='line'></div>";
             })
-            if(resultHtml!=''){
+            if(resultHtml!='' && data.pageCount!=1){
                 resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
             }
             $("#findLearn").html(resultHtml);
@@ -93,12 +93,12 @@ function search(type) {
                 /**生成页面数据*/
                 $.each(data.pageDate,function(index,element){
                     resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
-                    resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
-                    resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+                    resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='/main/findLearnDetails.do?cid="+element.cid+"'>"+element.typename+"</a>]</span></p>";
+                    resultHtml+="<figure><a title='"+element.title+"' href='/main/findLearnDetails.do?cid="+element.cid+"'><img src='"+element.titlepicture+"' alt='"+element.title+"'></a></figure>";
                     resultHtml+="<ul class='nlist'><p>"+element.introduction+"</p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
                     resultHtml+="</ul><div class='line'></div>";
                 })
-                if(resultHtml!=''){
+                if(resultHtml!='' && data.pageCount!=1){
                     resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
                 }
                 /**生成最新文章数据*/
@@ -130,6 +130,7 @@ function search(type) {
 
   /**-------------------------------------------动态创建 分页------------------------------------------------------------*/
   function pageInfo(pageNo,pageCount){
+      pageNo = parseInt(pageNo,"10");
       var result="";
       result+="<nav>";
       result+="<ul class='pagination'>";
@@ -223,12 +224,12 @@ function zhongjianye(pageNo){
     function update4(resultHtml,data){
         $.each(data.pageDate,function(index,element){
             resultHtml+="<h2><a title='"+element.title+"'href='#'>"+element.title+"</a></h2>";
-            resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='#'>"+element.typename+"</a>]</span></p>";
-            resultHtml+="<figure><a title='"+element.title+"' href='#'><img src='#' alt='"+element.title+"'>></a></figure>";
+            resultHtml+="<p class='dateview'><span>发布时间："+element.gtmcreate+"</span><span>作者："+element.author+"</span><span>[<a href='/main/findLearnDetails.do?cid="+element.cid+"'>"+element.typename+"</a>]</span></p>";
+            resultHtml+="<figure><a title='"+element.title+"' href='/main/findLearnDetails.do?cid="+element.cid+"'><img src='"+element.titlepicture+"' alt='"+element.title+"'></a></figure>";
             resultHtml+="<ul class='nlist'><p>"+element.introduction+"</p><a href='/main/findLearnDetails.do?cid="+element.cid+"' title='"+element.title+"' class='readmore'>阅读全文&gt;&gt;</a>";
             resultHtml+="</ul><div class='line'></div>";
         });
-        if(resultHtml!=''){
+        if(resultHtml!='' && data.pageCount!=1){
             resultHtml+="<div style='width: 600px;margin-right:50%;' id='footer'></div>";
         }
         $("#findLearn").html(resultHtml);

@@ -139,6 +139,9 @@ public class MainController {
         model.addAttribute("list",pageInfo.getPageDate().get(0));
         model.addAttribute("newsdate",pageInfo.getNewsDate());
         model.addAttribute("rankdate",pageInfo.getRankDate());
+        model.addAttribute("relatedate",pageInfo.getRelateDate());
+        model.addAttribute("ondate",pageInfo.getOnDate());
+        model.addAttribute("underDate",pageInfo.getUnderDate());
         return "lifeDetails";
     }
 
@@ -168,6 +171,9 @@ public class MainController {
         model.addAttribute("list",pageInfo.getPageDate().get(0));
         model.addAttribute("newsdate",pageInfo.getNewsDate());
         model.addAttribute("rankdate",pageInfo.getRankDate());
+        model.addAttribute("relatedate",pageInfo.getRelateDate());
+        model.addAttribute("ondate",pageInfo.getOnDate());
+        model.addAttribute("underDate",pageInfo.getUnderDate());
         return "shareDetails";
     }
 
@@ -198,6 +204,9 @@ public class MainController {
         model.addAttribute("list",pageInfo.getPageDate().get(0));
         model.addAttribute("newsdate",pageInfo.getNewsDate());
         model.addAttribute("rankdate",pageInfo.getRankDate());
+        model.addAttribute("relatedate",pageInfo.getRelateDate());
+        model.addAttribute("ondate",pageInfo.getOnDate());
+        model.addAttribute("underDate",pageInfo.getUnderDate());
         return "learnDetails";
     }
 

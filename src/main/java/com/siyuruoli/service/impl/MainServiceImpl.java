@@ -87,9 +87,19 @@ public class MainServiceImpl implements MainService{
         map.put("newslength",8);
         map.put("rank",0);
         map.put("ranklength",5);
+        /*修改阅读量*/
+        contentMapper.updateClickRate(map);
         List<Map<String,Object>> list=contentMapper.findlifeDetails(map);
         List<Map<String,Object>> newsDate=contentMapper.findLifeNewsDate(map);
         List<Map<String,Object>> rankDate=contentMapper.findLifeRankDate(map);
+        map.put("gjzc",list.get(0).get("gjzc"));
+        List<Map<String,Object>> relateDate=contentMapper.findLifeRelateDate(map);
+        map.put("lb","1");
+        Map<String,Object> onDate=contentMapper.findLifeOnDate(map);
+        Map<String,Object> underDate=contentMapper.findLifeUnderDate(map);
+        pageInfo.setOnDate(onDate);
+        pageInfo.setUnderDate(underDate);
+        pageInfo.setRelateDate(relateDate);
         pageInfo.setPageDate(list);
         pageInfo.setNewsDate(newsDate);
         pageInfo.setRankDate(rankDate);
@@ -142,9 +152,19 @@ public class MainServiceImpl implements MainService{
         map.put("newslength",8);
         map.put("rank",0);
         map.put("ranklength",5);
+          /*修改阅读量*/
+        contentMapper.updateClickRate(map);
         List<Map<String,Object>> list=contentMapper.findShareDetails(map);
         List<Map<String,Object>> newsDate=contentMapper.findShareNewsDate(map);
         List<Map<String,Object>> rankDate=contentMapper.findShareRankDate(map);
+        map.put("gjzc",list.get(0).get("gjzc"));
+        List<Map<String,Object>> relateDate=contentMapper.findShareRelateDate(map);
+        map.put("lb","2");
+        Map<String,Object> onDate=contentMapper.findLifeOnDate(map);
+        Map<String,Object> underDate=contentMapper.findLifeUnderDate(map);
+        pageInfo.setOnDate(onDate);
+        pageInfo.setUnderDate(underDate);
+        pageInfo.setRelateDate(relateDate);
         pageInfo.setPageDate(list);
         pageInfo.setNewsDate(newsDate);
         pageInfo.setRankDate(rankDate);
@@ -197,9 +217,19 @@ public class MainServiceImpl implements MainService{
         map.put("newslength",8);
         map.put("rank",0);
         map.put("ranklength",5);
+          /*修改阅读量*/
+        contentMapper.updateClickRate(map);
         List<Map<String,Object>> list=contentMapper.findLearnDetails(map);
         List<Map<String,Object>> newsDate=contentMapper.findLearnNewsDate(map);
         List<Map<String,Object>> rankDate=contentMapper.findLearnRankDate(map);
+        map.put("gjzc",list.get(0).get("gjzc"));
+        List<Map<String,Object>> relateDate=contentMapper.findLearnRelateDate(map);
+        map.put("lb","3");
+        Map<String,Object> onDate=contentMapper.findLifeOnDate(map);
+        Map<String,Object> underDate=contentMapper.findLifeUnderDate(map);
+        pageInfo.setOnDate(onDate);
+        pageInfo.setUnderDate(underDate);
+        pageInfo.setRelateDate(relateDate);
         pageInfo.setPageDate(list);
         pageInfo.setNewsDate(newsDate);
         pageInfo.setRankDate(rankDate);

@@ -56,19 +56,12 @@
 
 
         <h2 class="c_titile">${list.title}</h2>
-        <p class="box_c"><span class="d_time">发布时间：${list.gtmcreate}</span><span>编辑：<a href="mailto:1169763240@qq.com">${list.author}</a></span><span>阅读（<script src="./慢生活- ${list.title} - 一个站在web前端设计之路的女技术员个人博客网站_files/saved_resource"></script>3604）</span></p>
+        <p class="box_c"><span class="d_time">发布时间：${list.gtmcreate}</span><span>编辑：<a href="mailto:1169763240@qq.com">${list.author}</a></span><span>阅读（<script src="./慢生活- ${list.title} - 一个站在web前端设计之路的女技术员个人博客网站_files/saved_resource"></script>${list.reading}）</span></p>
         <ul class="infos">
-            <%--<p>从十月一就开始忙碌，网站也这么长的时间没有更新，但是访问IP每天还有增无减。虽然5号的婚礼前后很多琐事都没让我操心，但也着实累着了。每每看到电视里女主角憧憬婚礼的场景，还有我周围的朋友们七嘴八舌的谈论理想中的婚礼。我都感觉这对我来说并不重要。就拿我们的婚礼来说，跟司仪沟通的时候就直接说，一切从简，越简单越好，婚礼不过就是一个仪式，婚礼上的誓言就是主持人给我们的一句台词，我们俩成了这台词的演员。两个人最浪漫的时刻却在平平淡淡的生活中....</p>--%>
             ${list.content}
             <p align="center" class="pageLink"></p>
         </ul>
 
-      <%--  <h2 class="c_titile">柴米油盐的生活才是真实</h2>
-        <p class="box_c"><span class="d_time">发布时间：2013-10-21</span><span>编辑：<a href="mailto:dancesmiling@qq.com">杨青</a></span><span>阅读（<script src="./慢生活- 柴米油盐的生活才是真实 - 一个站在web前端设计之路的女技术员个人博客网站_files/saved_resource"></script>3604）</span></p>
-        <ul class="infos">
-            <p>从十月一就开始忙碌，网站也这么长的时间没有更新，但是访问IP每天还有增无减。虽然5号的婚礼前后很多琐事都没让我操心，但也着实累着了。每每看到电视里女主角憧憬婚礼的场景，还有我周围的朋友们七嘴八舌的谈论理想中的婚礼。我都感觉这对我来说并不重要。就拿我们的婚礼来说，跟司仪沟通的时候就直接说，一切从简，越简单越好，婚礼不过就是一个仪式，婚礼上的誓言就是主持人给我们的一句台词，我们俩成了这台词的演员。两个人最浪漫的时刻却在平平淡淡的生活中....</p>
-            <p align="center" class="pageLink"></p>
-        </ul>--%>
 
         <div class="keybq">
             <p><span>关键字词</span>：${list.gjzc}</p>
@@ -76,39 +69,20 @@
 
         <div class="nextinfo">
             <p>上一篇：
-                <a href="http://www.yangqq.com/news/s/2013-09-08/609.html">爱情不容有错，即使错了那就重来</a>
+                <a href='/main/findlifeDetails.do?cid=${ondate.cid}' title='${ondate.title}' >${ondate.title}</a>
             </p>
             <p>下一篇：
-                <a href="http://www.yangqq.com/news/s/2013-11-20/620.html">做程序员的这些年，慢慢才体会到健康才是奢侈品</a>
+                <a href='/main/findlifeDetails.do?cid=${underDate.cid}' title='${underDate.title}' >${underDate.title}</a>
             </p>
         </div>
         <div class="otherlink">
             <h2>相关文章</h2>
             <ul>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2013-09-13/610.html" title="一个三十而立的男程序员真实讲述：代码搅乱我的生活">一个三十而立的男程序员真实讲述：代码搅乱我的生活</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/newstalk/mood/2013-08-05/569.html" title="生活方式">生活方式</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/download/div/2013-07-13/375.html" title="Wedding-婚礼主题、情人节网站模板">Wedding-婚礼主题、情人节网站模板</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/newstalk/mood/2013-07-04/349.html" title="生活是一场漫长的旅行">生活是一场漫长的旅行</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/newstalk/mood/2013-07-04/346.html" title="每个人都有每个人各自的生活">每个人都有每个人各自的生活</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/download/free/2013-08-12/591.html" title="紫色婚礼主题html5模板">紫色婚礼主题html5模板</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/read/2013-06-11/210.html" title="生活早激励，获得成功的不二法则">生活早激励，获得成功的不二法则</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2013-06-06/59.html" title="女程序员的生活，真苦涩">女程序员的生活，真苦涩</a>
-                </li>
+                <c:forEach items="${relatedate}" var="relate" >
+                    <li>
+                        <a href='/main/findlifeDetails.do?cid=${relate.cid}' title='${relate.title}' >${relate.title}</a>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
         <div class="blank"></div>
@@ -167,12 +141,6 @@
                             <a href='/main/findlifeDetails.do?cid=${news.cid}' title='${news.title}' >${news.title}</a>
                         </li>
                   </c:forEach>
-             <%--   <li>
-                    <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-04/634.html" title="云南之行——丽江古镇玉龙雪山" target="_blank">云南之行——丽江古镇玉龙雪山</a>
-                </li>--%>
             </ul>
             <h3 class="ph">
                 <p>点击<span>排行</span></p>
@@ -183,12 +151,6 @@
                         <a href='/main/findlifeDetails.do?cid=${rank.cid}' title='${rank.title}' >${rank.title}</a>
                     </li>
                 </c:forEach>
-              <%--  <li>
-                    <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-04/632.html" title="云南之行——初到昆明滇池半日游" target="_blank">云南之行——初到昆明滇池半日游</a>
-                </li>--%>
             </ul>
         </div>
         <div class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1504421632772">
@@ -258,12 +220,12 @@
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by DanceSmile
-        <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
-        <script type="text/javascript">
+    <p>Design by zizhuling
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
+     <%--   <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>
+        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>

@@ -318,12 +318,12 @@
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by DanceSmile
-        <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
-        <script type="text/javascript">
+    <p>Design by zizhuling
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
+     <%--   <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>
+        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>

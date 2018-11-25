@@ -28,6 +28,12 @@ public class PageInfo<T> {
 	private List<T> newsDate;
 	//排行榜
 	private List<T> rankDate;
+	//相关文档
+	private List<T> relateDate;
+	/**上一篇*/
+	private T onDate;
+	/**下一篇*/
+	private T underDate;
 	
 
 	public PageInfo(String pageNo) {
@@ -36,7 +42,30 @@ public class PageInfo<T> {
 		
 	}
 
-	
+	public T getOnDate() {
+		return onDate;
+	}
+
+	public void setOnDate(T onDate) {
+		this.onDate = onDate;
+	}
+
+	public T getUnderDate() {
+		return underDate;
+	}
+
+	public void setUnderDate(T underDate) {
+		this.underDate = underDate;
+	}
+
+	public List<T> getRelateDate() {
+		return relateDate;
+	}
+
+	public void setRelateDate(List<T> relateDate) {
+		this.relateDate = relateDate;
+	}
+
 	public String getState() {
 		return state;
 	}

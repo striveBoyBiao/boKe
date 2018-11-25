@@ -75,19 +75,19 @@
         <a href="http://www.yangqq.com/newstalk/index_2.html">&gt;</a>
         <a href="http://www.yangqq.com/newstalk/index_7.html">&gt;&gt;</a>
     </div>--%>
-    <div style='width: 600px;margin-right:50%;' id='footer'></div>
+    <div style='width: 600px;margin-left:20%;' id='footer'></div>
 </div>
 <div id="tbox">
     <a id="togbook" href="/main/doing.do"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
-    <p>Design by StriveBoyBiao
-        <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a>
-        <script type="text/javascript">
+    <p>Design by zizhuling
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
+     <%--   <script type="text/javascript">
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>
+        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>
