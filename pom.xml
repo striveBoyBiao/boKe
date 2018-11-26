@@ -197,8 +197,19 @@
       <version>1.9</version>
     </dependency>
 
-      <!--java报表开发-->
-      <dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.6</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.2</version>
+    </dependency>
+
+    <!--java报表开发-->
+    <!--  <dependency>
           <groupId>com.bstek.ureport</groupId>
           <artifactId>ureport2-console</artifactId>
           <version>2.2.5</version>
@@ -213,7 +224,7 @@
               </exclusion>
           </exclusions>
       </dependency>
-
+-->
 
   </dependencies>
 

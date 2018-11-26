@@ -85,7 +85,7 @@
 
 
     <!--导入ureport报表配置文件-->
-    <import resource="classpath:ureport-console-context.xml" />
+   <!-- <import resource="classpath:ureport-console-context.xml" />-->
 
 </beans>
 
