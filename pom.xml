@@ -3,11 +3,11 @@
 
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>cn.hebiao</groupId>
+  <groupId>cn.zizhuling</groupId>
   <artifactId>boKe</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>boKe Maven Webapp</name>
+  <name>boKe</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -26,6 +26,8 @@
     <!-- log4j日志包版本号 -->
     <slf4j.version>1.7.18</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
+    <!--druid数据源-->
+    <druid.version>1.1.4</druid.version>
 
   </properties>
 
@@ -135,6 +137,13 @@
       <version>1.2.2</version>
     </dependency>
 
+    <!-- 连接池 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+
     <!-- 添加fastjson -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -208,23 +217,6 @@
       <version>3.2.2</version>
     </dependency>
 
-    <!--java报表开发-->
-    <!--  <dependency>
-          <groupId>com.bstek.ureport</groupId>
-          <artifactId>ureport2-console</artifactId>
-          <version>2.2.5</version>
-          <exclusions>
-              <exclusion>
-                  <artifactId>commons-logging</artifactId>
-                  <groupId>commons-logging</groupId>
-              </exclusion>
-              <exclusion>
-                  <artifactId>xmlbeans</artifactId>
-                  <groupId>org.apache.xmlbeans</groupId>
-              </exclusion>
-          </exclusions>
-      </dependency>
--->
 
   </dependencies>
 
