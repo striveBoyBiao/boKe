@@ -26,8 +26,8 @@ public class MainServiceImpl implements MainService{
     @Override
     public PageInfo findDoing(Map<String,Object> map) {
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
-        map.put("pageBegin",pageInfo.getPageBegin());
-        map.put("pageSize",pageInfo.getPageSize());
+        map.put("pagebegin",pageInfo.getPageBegin());
+        map.put("pagesize",pageInfo.getPageSize());
         int rowCount=contentMapper.queryCount(map);
         int pageCount;
         //计算总共多少页
@@ -49,8 +49,8 @@ public class MainServiceImpl implements MainService{
     @Override
     public PageInfo findLife(Map<String, Object> map) {
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
-        map.put("pageBegin",pageInfo.getPageBegin());
-        map.put("pageSize",pageInfo.getPageSize());
+        map.put("pagebegin",pageInfo.getPageBegin());
+        map.put("pagesize",pageInfo.getPageSize());
         int rowCount=contentMapper.queryLifeCount(map);
         int pageCount;
         //计算总共多少页
@@ -110,8 +110,8 @@ public class MainServiceImpl implements MainService{
     @Override
     public PageInfo findShare(Map<String, Object> map) {
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
-        map.put("pageBegin",pageInfo.getPageBegin());
-        map.put("pageSize",pageInfo.getPageSize());
+        map.put("pagebegin",pageInfo.getPageBegin());
+        map.put("pagesize",pageInfo.getPageSize());
         String search=map.get("search")==null?"":map.get("search").toString();
         if(StringUtils.isNotEmpty(search)){
             map.put("search","%"+search+"%");
@@ -175,8 +175,8 @@ public class MainServiceImpl implements MainService{
     @Override
     public PageInfo findLearn(Map<String, Object> map) {
         PageInfo pageInfo=new PageInfo(map.get("pageNo").toString());
-        map.put("pageBegin",pageInfo.getPageBegin());
-        map.put("pageSize",pageInfo.getPageSize());
+        map.put("pagebegin",pageInfo.getPageBegin());
+        map.put("pagesize",pageInfo.getPageSize());
         String search=map.get("search")==null?"":map.get("search").toString();
         if(StringUtils.isNotEmpty(search)){
             map.put("search","%"+search+"%");

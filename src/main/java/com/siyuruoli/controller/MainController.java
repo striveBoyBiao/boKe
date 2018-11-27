@@ -16,15 +16,24 @@ import java.util.Map;
  * Created by hebiao on 2017/7/8.
  */
 @Controller
-@RequestMapping("/main")
 public class MainController {
     @Autowired
     private MainService mainService;
+
     /**
      *跳到主界面
      * @return
      */
-    @RequestMapping("/main")
+    @RequestMapping("/")
+    public String index(){
+        return "main";
+    }
+
+    /**
+     *跳到主界面
+     * @return
+     */
+    @RequestMapping("/main/main")
     public String main(){
              return "main";
     }
@@ -33,7 +42,7 @@ public class MainController {
      *跳到关于我界面
      * @return
      */
-    @RequestMapping("/about")
+    @RequestMapping("/main/about")
     public String about(){
         return "about";
     }
@@ -42,7 +51,7 @@ public class MainController {
      *跳到慢生活界面
      * @return
      */
-    @RequestMapping("/life")
+    @RequestMapping("/main/life")
     public String life(){
         return "life";
     }
@@ -51,7 +60,7 @@ public class MainController {
      *跳到碎言碎语界面
      * @return
      */
-    @RequestMapping("/doing")
+    @RequestMapping("/main/doing")
     public String doing(){
         return "doing";
     }
@@ -60,7 +69,7 @@ public class MainController {
      *跳到模板分享界面
      * @return
      */
-    @RequestMapping("/share")
+    @RequestMapping("/main/share")
     public String share(){
         return "share";
     }
@@ -69,7 +78,7 @@ public class MainController {
      *跳到学无止境界面
      * @return
      */
-    @RequestMapping("/learn")
+    @RequestMapping("/main/learn")
     public String learn(){
         return "learn";
     }
@@ -78,7 +87,7 @@ public class MainController {
      *跳到评论界面
      * @return
      */
-    @RequestMapping("/saying")
+    @RequestMapping("/main/saying")
     public String saying(){
         return "saying";
     }
@@ -87,7 +96,7 @@ public class MainController {
      *跳到慢生活详情界面
      * @return
      */
-    @RequestMapping("/lifeDetails")
+    @RequestMapping("/main/lifeDetails")
     public String lifeDetails(){
         return "lifeDetails";
     }
@@ -96,7 +105,7 @@ public class MainController {
      *跳到学无止境详情界面
      * @return
      */
-    @RequestMapping("/lenrnDetails")
+    @RequestMapping("/main/lenrnDetails")
     public String lenrnDetails(){
         return "learnDetails-1";
     }
@@ -106,7 +115,7 @@ public class MainController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("/findDoing")
+    @RequestMapping("/main/findDoing")
     public PageInfo findDoing(HttpServletRequest request){
          Map<String,Object> map=new HashMap<>();
          map.put("pageNo",request.getParameter("pageNo"));
@@ -119,7 +128,7 @@ public class MainController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("/findLife")
+    @RequestMapping("/main/findLife")
     public PageInfo findLife(HttpServletRequest request){
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
@@ -131,7 +140,7 @@ public class MainController {
      * 查询慢生活详细界面数据
      * @return
      */
-    @RequestMapping("/findlifeDetails")
+    @RequestMapping("/main/findlifeDetails")
     public String findlifeDetails(HttpServletRequest request,Model model){
         Map<String,Object> map=new HashMap<>();
         map.put("cid",request.getParameter("cid"));
@@ -150,7 +159,7 @@ public class MainController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("/findShare")
+    @RequestMapping("/main/findShare")
     public PageInfo findShare(HttpServletRequest request){
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
@@ -163,7 +172,7 @@ public class MainController {
      * 查询模板分享详细界面数据
      * @return
      */
-    @RequestMapping("/findShareDetails")
+    @RequestMapping("/main/findShareDetails")
     public String findShareDetails(HttpServletRequest request,Model model){
         Map<String,Object> map=new HashMap<>();
         map.put("cid",request.getParameter("cid"));
@@ -183,7 +192,7 @@ public class MainController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("/findLearn")
+    @RequestMapping("/main/findLearn")
     public PageInfo findLearn(HttpServletRequest request){
         Map<String,Object> map=new HashMap<>();
         map.put("type",request.getParameter("type"));
@@ -196,7 +205,7 @@ public class MainController {
      * 查询学无止境详细界面数据
      * @return
      */
-    @RequestMapping("/findLearnDetails")
+    @RequestMapping("/main/findLearnDetails")
     public String findLearnDetails(HttpServletRequest request,Model model){
         Map<String,Object> map=new HashMap<>();
         map.put("cid",request.getParameter("cid"));

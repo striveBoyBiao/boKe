@@ -45,7 +45,7 @@
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
-      <version>7.0</version>
+      <version>8.0</version>
     </dependency>
 
     <!-- 添加junit4依赖 -->
@@ -205,12 +205,13 @@
       <artifactId>commons-codec</artifactId>
       <version>1.9</version>
     </dependency>
-
+    <!--工具包-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.6</version>
     </dependency>
+    <!--map包-->
     <dependency>
       <groupId>commons-collections</groupId>
       <artifactId>commons-collections</artifactId>

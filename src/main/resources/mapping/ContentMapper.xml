@@ -4,18 +4,18 @@
 
     <!--分页查询碎言碎语界面数据-->
     <select id="findDoing" parameterType="Map" resultType="ContentDO">
-      SELECT BC.CID,
-              BC.CONTENT,
-              DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE
-      FROM BLOG_CONTENT BC
-      WHERE BC.CATEGORIES='5'
-      LIMIT #{pageBegin},#{pageSize}
+      select bc.cid,
+              bc.content,
+              date_format(bc.gtm_create, '%y-%m-%d') gtmcreate
+      from blog_content bc
+      where bc.categories='5'
+      limit #{pagebegin},#{pagesize}
     </select>
     <!--查询碎言碎语界面数据数量-->
     <select id="queryCount" parameterType="Map" resultType="int">
-        SELECT count(*)
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES='5'
+        select count(*)
+        from blog_content bc
+        where bc.categories='5'
     </select>
 
 
@@ -24,71 +24,71 @@
 
     <!--查询慢生活数据数量-->
     <select id="queryLifeCount" parameterType="Map" resultType="int">
-        SELECT count(*)
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
+        select count(*)
+        from blog_content bc
+        where bc.categories in ('1','2','3','4')
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
     </select>
     <!--分页查询慢生活界面数据-->
     <select id="findLife" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.INTRODUCTION,
-                BC.TITLE_PICTURE TITLEPICTURE
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
-        LIMIT #{pageBegin},#{pageSize}
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.introduction,
+                bc.title_picture titlepicture
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('1','2','3','4')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
+        limit #{pagebegin},#{pagesize}
     </select>
     <!--查询慢生活最新文章-->
     <select id="findLifeNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        order by BC.GTM_MODIFIED desc
-        LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('1','2','3','4')
+        order by bc.gtm_modified desc
+        limit #{news},#{newslength}
     </select>
     <!--查询慢生活排行榜-->
     <select id="findLifeRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        order by BC.COMMENTS_NUM desc
-        LIMIT #{rank},#{ranklength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('1','2','3','4')
+        order by bc.comments_num desc
+        limit #{rank},#{ranklength}
     </select>
     <!--查询慢生活相关文章-->
     <select id="findLifeRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-        BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
-         LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('1','2','3','4')
+        and bc.content like concat('%',#{gjzc},'%')
+         limit #{news},#{newslength}
     </select>
 
     <!--查询慢生活详细界面数据-->
     <select id="findlifeDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.GJZC,
-                BC.READING
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('1','2','3','4')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.gjzc,
+                bc.reading
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('1','2','3','4')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
     </select>
 
 
@@ -98,72 +98,72 @@
 
     <!--分页查询模板分享界面数据-->
     <select id="findShare" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.INTRODUCTION,
-                BC.TITLE_PICTURE TITLEPICTURE
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
-        <if test="search!=null and search!=''">and BC.TITLE LIKE #{search} </if>
-        LIMIT #{pageBegin},#{pageSize}
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.introduction,
+                bc.title_picture titlepicture
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('6','7','8','9')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
+        <if test="search!=null and search!=''">and bc.title like #{search} </if>
+        limit #{pagebegin},#{pagesize}
     </select>
     <!--查询模板分享详细界面数据-->
     <select id="findShareDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.GJZC,
-                BC.READING
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.gjzc,
+                bc.reading
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('6','7','8','9')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
     </select>
     <!--查询模板分享数据数量-->
     <select id="queryShareCount" parameterType="Map" resultType="int">
-        SELECT count(*)
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
-        <if test="search!=null and search!=''">and BC.TITLE LIKE #{search} </if>
+        select count(*)
+        from blog_content bc
+        where bc.categories in ('6','7','8','9')
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
+        <if test="search!=null and search!=''">and bc.title like #{search} </if>
     </select>
     <!--查询模板分享最新文章-->
     <select id="findShareNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        order by BC.GTM_MODIFIED desc
-        LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('6','7','8','9')
+        order by bc.gtm_modified desc
+        limit #{news},#{newslength}
     </select>
     <!--查询模板分享排行榜-->
     <select id="findShareRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        order by BC.COMMENTS_NUM desc
-        LIMIT #{rank},#{ranklength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('6','7','8','9')
+        order by bc.comments_num desc
+        limit #{rank},#{ranklength}
     </select>
     <!--查询模板分享相关文章-->
     <select id="findShareRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('6','7','8','9')
-        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
-         LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('6','7','8','9')
+        and bc.content like concat('%',#{gjzc},'%')
+         limit #{news},#{newslength}
     </select>
 
 
@@ -171,95 +171,95 @@
 
     <!--分页查询学无止境界面数据-->
     <select id="findLearn" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.INTRODUCTION,
-                BC.TITLE_PICTURE TITLEPICTURE
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
-        <if test="search!=null and search!=''">and BC.TITLE LIKE #{search} </if>
-        LIMIT #{pageBegin},#{pageSize}
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.introduction,
+                bc.title_picture titlepicture
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('10','11','12','13','14','15')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
+        <if test="search!=null and search!=''">and bc.title like #{search} </if>
+        limit #{pagebegin},#{pagesize}
     </select>
     <!--查询学无止境详细界面数据-->
     <select id="findLearnDetails" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.CONTENT,
-                DATE_FORMAT(BC.GTM_CREATE, '%Y-%m-%d') GTMCREATE,
-                BC.TITLE,
-                SD.NAME TYPENAME,
-                BC.AUTHOR,
-                BC.GJZC,
-                BC.READING
-        FROM BLOG_CONTENT BC
-        left join SYS_DICT SD on SD.TYPE='blog_type' and SD.VALUE=BC.CATEGORIES
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        <if test="cid!=null and cid!=''">and BC.CID=#{cid}</if>
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
+        select bc.cid,
+                bc.content,
+                date_format(bc.gtm_create, '%y-%m-%d') gtmcreate,
+                bc.title,
+                sd.name typename,
+                bc.author,
+                bc.gjzc,
+                bc.reading
+        from blog_content bc
+        left join sys_dict sd on sd.type='blog_type' and sd.value=bc.categories
+        where bc.categories in ('10','11','12','13','14','15')
+        <if test="cid!=null and cid!=''">and bc.cid=#{cid}</if>
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
     </select>
     <!--查询学无止境数据数量-->
     <select id="queryLearnCount" parameterType="Map" resultType="int">
-        SELECT count(*)
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        <if test="type!=null and type!=''">and BC.CATEGORIES=#{type}</if>
-        <if test="search!=null and search!=''">and BC.TITLE LIKE #{search} </if>
+        select count(*)
+        from blog_content bc
+        where bc.categories in ('10','11','12','13','14','15')
+        <if test="type!=null and type!=''">and bc.categories=#{type}</if>
+        <if test="search!=null and search!=''">and bc.title like #{search} </if>
     </select>
     <!--查询学无止境最新文章-->
     <select id="findLearnNewsDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        order by BC.GTM_MODIFIED desc
-        LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('10','11','12','13','14','15')
+        order by bc.gtm_modified desc
+        limit #{news},#{newslength}
     </select>
     <!--查询学无止境排行榜-->
     <select id="findLearnRankDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        order by BC.COMMENTS_NUM desc
-        LIMIT #{rank},#{ranklength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('10','11','12','13','14','15')
+        order by bc.comments_num desc
+        limit #{rank},#{ranklength}
     </select>
     <!--查询学无止境相关文章-->
     <select id="findLearnRelateDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE BC.CATEGORIES in ('10','11','12','13','14','15')
-        and BC.CONTENT like CONCAT('%',#{gjzc},'%')
-         LIMIT #{news},#{newslength}
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where bc.categories in ('10','11','12','13','14','15')
+        and bc.content like concat('%',#{gjzc},'%')
+         limit #{news},#{newslength}
     </select>
 
     <!--查询上一篇-->
     <select id="findLifeOnDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE 1=1
-         <if test="lb==1">AND BC.CATEGORIES in ('1','2','3','4')</if>
-         <if test="lb==2">AND BC.CATEGORIES in ('6','7','8','9')</if>
-         <if test="lb==3">AND BC.CATEGORIES in ('10','11','12','13','14','15')</if>
-        AND #{cid}>BC.CID order by BC.CID desc LIMIT 1 ;
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where 1=1
+         <if test="lb==1">and bc.categories in ('1','2','3','4')</if>
+         <if test="lb==2">and bc.categories in ('6','7','8','9')</if>
+         <if test="lb==3">and bc.categories in ('10','11','12','13','14','15')</if>
+        and #{cid}>bc.cid order by bc.cid desc limit 1 ;
     </select>
     <!--查询下一篇-->
     <select id="findLifeUnderDate" parameterType="Map" resultType="org.apache.commons.collections.map.CaseInsensitiveMap">
-        SELECT BC.CID,
-                BC.TITLE
-        FROM BLOG_CONTENT BC
-        WHERE 1=1
-        <if test="lb==1">AND BC.CATEGORIES in ('1','2','3','4')</if>
-        <if test="lb==2">AND BC.CATEGORIES in ('6','7','8','9')</if>
-        <if test="lb==3">AND BC.CATEGORIES in ('10','11','12','13','14','15')</if>
-        AND BC.CID>#{cid} order by BC.CID asc LIMIT 1 ;
+        select bc.cid,
+                bc.title
+        from blog_content bc
+        where 1=1
+        <if test="lb==1">and bc.categories in ('1','2','3','4')</if>
+        <if test="lb==2">and bc.categories in ('6','7','8','9')</if>
+        <if test="lb==3">and bc.categories in ('10','11','12','13','14','15')</if>
+        and bc.cid>#{cid} order by bc.cid asc limit 1 ;
     </select>
 
     <update id="updateClickRate" parameterType="Map">

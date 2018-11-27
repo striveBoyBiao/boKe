@@ -40,33 +40,35 @@
 
 
     <!-- 配置dbcp数据源 -->
-  <!--  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="${driverClasss}"/>
         <property name="url" value="${jdbcUrl}"/>
         <property name="username" value="${username}"/>
         <property name="password" value="${password}"/>
-        &lt;!&ndash; 初始化连接大小 &ndash;&gt;
+        <!-- 初始化连接大小 -->
         <property name="initialSize" value="${initialSize}"></property>
-        &lt;!&ndash; 连接池最大数量 &ndash;&gt;
+        <!-- 连接池最大数量 -->
         <property name="maxActive" value="${maxActive}"></property>
-        &lt;!&ndash; 连接池最大空闲 &ndash;&gt;
+        <!-- 连接池最大空闲 -->
         <property name="maxIdle" value="${maxIdle}"></property>
-        &lt;!&ndash; 连接池最小空闲 &ndash;&gt;
+        <!-- 连接池最小空闲 -->
         <property name="minIdle" value="${minIdle}"></property>
-        &lt;!&ndash; 获取连接最大等待时间 &ndash;&gt;
+        <!-- 获取连接最大等待时间 -->
         <property name="maxWait" value="${maxWait}"></property>
-    </bean>-->
+    </bean>
     <!--druid 数据库连接池 -->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+ <!--   <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           destroy-method="close">
         <property name="url" value="${jdbcUrl}" />
         <property name="username" value="${username}" />
         <property name="password" value="${password}" />
         <property name="driverClassName" value="${driverClasss}" />
-        <property name="maxActive" value="10" />
-        <property name="minIdle" value="1" />
-    </bean>
+        <property name="maxActive" value="${maxActive}" />
+        <property name="minIdle" value="${minIdle}" />
+        <property name="maxWait" value="${maxWait}"/>
+        <property name="initialSize" value="${initialSize}"/>
+    </bean>-->
 
 
 
