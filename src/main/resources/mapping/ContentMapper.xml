@@ -263,7 +263,7 @@
     </select>
 
     <update id="updateClickRate" parameterType="Map">
-        update BLOG_CONTENT set reading=reading+1 where cid=#{cid}
+        update blog_content set reading=reading+1 where cid=#{cid}
     </update>
 
 
