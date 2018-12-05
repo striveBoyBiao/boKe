@@ -5,6 +5,7 @@ import com.siyuruoli.model.ContentDO;
 import com.siyuruoli.service.MainService;
 import com.siyuruoli.utils.PageInfo;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,7 +17,7 @@ import java.util.Map;
  */
 @Service
 public class MainServiceImpl implements MainService{
-    @Resource
+    @Autowired
     private ContentMapper contentMapper;
 
     /**
