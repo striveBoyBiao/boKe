@@ -14,8 +14,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>${list.title} - 一个站在web前端设计之路的男技术员个人博客网站</title>
-    <meta name="keywords" content="生活,婚礼">
-    <meta name="description" content="柴米油盐的生活才是真实">
+    <meta name="keywords" content="${list.gjzc}">
+    <meta name="description" content="${list.title}">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/new.css" rel="stylesheet">
     <link href="/css/changyan.css" rel="stylesheet">

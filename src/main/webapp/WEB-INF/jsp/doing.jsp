@@ -14,7 +14,8 @@
 
     <title>碎言碎语 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/mood.css" rel="stylesheet">
     <!--[if lt IE 9]>

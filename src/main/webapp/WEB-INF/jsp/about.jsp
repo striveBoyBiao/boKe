@@ -14,6 +14,7 @@
     <title>关于我—一个站在web前段设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="何彪">
     <meta name="description" content="">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/about.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -97,7 +98,7 @@
             var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
         </script>--%>
-        <script src="js/h.js" type="text/javascript"></script>
+        <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>
 <script type="text/javascript">

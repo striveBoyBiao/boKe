@@ -12,6 +12,7 @@
     <title>回忆-情侣博客</title>
     <meta name="Keywords" content="博客模板,情侣博客" >
     <meta name="Description" content="情侣博客" >
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/index.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="/js/modernizr.js"></script>

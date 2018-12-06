@@ -14,7 +14,8 @@
 
     <title>慢生活 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="慢生活,个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="何彪个人博客网站,一个站在java后端设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在java后端设计之路的男技术员个人博客网站">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -135,24 +136,6 @@
                     <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
                 </li>
                 <li>
-                    <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2014-07-31/725.html" title="即便是坑，我也想要拉你入伙！" target="_blank">即便是坑，我也想要拉你入伙！</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2014-07-10/722.html" title="女程序员职业生涯该如何发展？" target="_blank">女程序员职业生涯该如何发展？</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/read/2014-06-30/700.html" title="每人的生命里都有一只碗" target="_blank">每人的生命里都有一只碗</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-06-14/690.html" title="伪球迷看世界杯" target="_blank">伪球迷看世界杯</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-04-09/660.html" title="犯错了怎么办？" target="_blank">犯错了怎么办？</a>
-                </li>
-                <li>
                     <a href="http://www.yangqq.com/news/read/2014-03-29/655.html" title="两只蜗牛艰难又浪漫的一吻" target="_blank">两只蜗牛艰难又浪漫的一吻</a>
                 </li>--%>
             </ul>
@@ -162,27 +145,6 @@
             <ul class="paih" id="liferankdate">
                <%-- <li>
                     <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank">【孕期日记】生活本该如此</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2016-05-20/751.html" title="IP要突破2000+了" target="_blank">IP要突破2000+了</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2014-07-31/725.html" title="即便是坑，我也想要拉你入伙！" target="_blank">即便是坑，我也想要拉你入伙！</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2014-07-10/722.html" title="女程序员职业生涯该如何发展？" target="_blank">女程序员职业生涯该如何发展？</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/life/2013-09-13/610.html" title="一个三十而立的男程序员真实讲述：代码搅乱我的生活" target="_blank">一个三十而立的男程序员真实讲述：代码搅乱我的生活</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-01-08/635.html" title="个人博客从简不繁" target="_blank">个人博客从简不繁</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/read/2014-06-30/700.html" title="每人的生命里都有一只碗" target="_blank">每人的生命里都有一只碗</a>
-                </li>
-                <li>
-                    <a href="http://www.yangqq.com/news/s/2014-04-09/660.html" title="犯错了怎么办？" target="_blank">犯错了怎么办？</a>
                 </li>
                 <li>
                     <a href="http://www.yangqq.com/news/s/2014-01-04/632.html" title="云南之行——初到昆明滇池半日游" target="_blank">云南之行——初到昆明滇池半日游</a>
@@ -215,7 +177,7 @@
                 ptp: "0"
             }
         </script>
-        <script src="js/c.js" type="text/javascript"></script>
+        <script src="/js/c.js" type="text/javascript"></script>
         <div id="BAIDU_SSP__wrapper_u2063915_0">
             <iframe id="iframeu2063915_0" name="iframeu2063915_0" src="/html/lclm.html"
                     width="250" height="250" align="center,center" vspace="0" hspace="0"

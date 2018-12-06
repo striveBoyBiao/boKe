@@ -93,7 +93,8 @@
     </style>
     <title>学无止境 - 一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="html5,div,css,个人博客,个人网站,个人博客模板,个人网站模板">
-    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站，提供个人博客，个人网站div+css源码分享">
+    <meta name="description" content="何彪个人博客网站,一个站在web前段设计之路的男技术员个人博客网站">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/learn.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -302,7 +303,7 @@
                 ptp: "0"
             }
         </script>
-        <script src="js/c.js" type="text/javascript"></script>
+        <script src="/js/c.js" type="text/javascript"></script>
         <div id="BAIDU_SSP__wrapper_u2063915_0">
             <iframe id="iframeu2063915_0" name="iframeu2063915_0" src="/html/ocrm.html" width="250" height="250"
                     align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no"

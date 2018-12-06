@@ -15,6 +15,7 @@
     <title>何彪个人博客网站—一个站在web前端设计之路的男技术员个人博客网站</title>
     <meta name="keywords" content="留言板">
     <meta name="description" content="留言板">
+    <link href="${pageContext.request.contextPath}/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/css/base.css" rel="stylesheet">
     <link href="/css/book.css" rel="stylesheet">
     <link href="/css/changyan.css" rel="stylesheet">
