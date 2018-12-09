@@ -24,11 +24,7 @@
     <script src="/js/modernizr.js"></script>
     <![endif]-->
     <!-- 返回顶部调用 begin -->
-    <link href="/css/lrtk.css" rel="stylesheet">
-
-
     <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
 
@@ -216,16 +212,12 @@
     </aside>
 </article>
 <div id="tbox">
-    <a id="togbook" href="/main/lifeDetails.do"></a>
+    <a id="togbook" href="#"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
     <p>Design by zizhuling
         <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
-     <%--   <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>

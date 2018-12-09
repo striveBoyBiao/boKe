@@ -101,10 +101,8 @@
     <script src="/js/modernizr.js"></script>
     <![endif]-->
     <!-- 返回顶部调用 begin -->
-    <link href="/css/lrtk.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css"  rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
 
@@ -131,45 +129,6 @@
         <a href="#" class="n2">学无止境</a></h1>
     <div class="newblog left" id="findLearn">
 
-
-     <%--   <h2><a title="三步实现滚动条触动css动画效果" href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html">三步实现滚动条触动css动画效果</a></h2>
-        <p class="dateview"><span>发布时间：2017-08-08</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/jstt/css3/">css3</a>]</span></p>
-        <figure>
-            <a title="三步实现滚动条触动css动画效果" href="http://www.yangqq.com/jstt/css3/2017-08-08/787.html"><img src="img/notimg.gif" alt="三步实现滚动条触动css动画效果"></a>
-        </figure>
-        <ul class="nlist">
-            <p>现在很多网站都有这种效果，我就整理了一下，分享出来。利用滚动条来实现动画效果，ScrollReveal.js 用于创建和管理元素进入可视区域时的动画效果，帮助你的网站增加吸引力</p>
-            <a title="三步实现滚动条触动css动画效果" href="/main/lenrnDetails.do" target="_blank" class="readmore">详细信息&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>
-
-
-        <h2><a title="【心路历程】请不要在设计这条路上徘徊啦" href="http://www.yangqq.com/jstt/bj/2017-07-13/784.html">【心路历程】请不要在设计这条路上徘徊啦</a></h2>
-        <p class="dateview"><span>发布时间：2017-07-13</span><span>作者：</span><span>[<a href="http://www.yangqq.com/jstt/bj/">心得笔记</a>]</span></p>
-        <figure>
-            <a title="【心路历程】请不要在设计这条路上徘徊啦" href="http://www.yangqq.com/jstt/bj/2017-07-13/784.html"><img src="img/1ba28e77a69208501de15d82eafe7431.jpg" alt="【心路历程】请不要在设计这条路上徘徊啦"></a>
-        </figure>
-        <ul class="nlist">
-            <p> 我整理了一下网友给我的来信，如果你还在踌躇不前，不妨来看看，到底要不要坚持下去！我也欢迎大家给我来信，希望能帮到更多人。</p>
-            <a title="【心路历程】请不要在设计这条路上徘徊啦" href="http://www.yangqq.com/jstt/bj/2017-07-13/784.html" target="_blank" class="readmore">详细信息&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>--%>
-
-
-
-
-     <%--   <div class="blank"></div>
-        <div class="page">
-            <a title="Total record"><b>138</b> </a><b>1</b>
-            <a href="http://www.yangqq.com/jstt/index_2.html">2</a>
-            <a href="http://www.yangqq.com/jstt/index_3.html">3</a>
-            <a href="http://www.yangqq.com/jstt/index_4.html">4</a>
-            <a href="http://www.yangqq.com/jstt/index_5.html">5</a>
-            <a href="http://www.yangqq.com/jstt/index_6.html">6</a>
-            <a href="http://www.yangqq.com/jstt/index_2.html">&gt;</a>
-            <a href="http://www.yangqq.com/jstt/index_6.html">&gt;&gt;</a>
-        </div>--%>
-       <%-- <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>--%>
     </div>
     <aside class="right">
         <script type="text/javascript">
@@ -315,16 +274,12 @@
     </aside>
 </article>
 <div id="tbox">
-    <a id="togbook" href="/main/learn.do"></a>
+    <a id="togbook" href="#"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
     <p>Design by zizhuling
         <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
-     <%--   <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>

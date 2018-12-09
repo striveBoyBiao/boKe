@@ -22,10 +22,8 @@
     <script src="/js/modernizr.js"></script>
     <![endif]-->
     <!-- 返回顶部调用 begin -->
-    <link href="/css/lrtk.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css"  rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
 
@@ -54,44 +52,6 @@
         href="#" class="n2">慢生活</a></h1>
          <div class="newblog left" id="findLife">
 
-
-     <%--   <h2><a title="IP要突破2000+了" href="http://www.yangqq.com/news/s/2016-05-20/751.html">IP要突破2000+了</a></h2>
-        <p class="dateview"><span>发布时间：2016-05-20</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/news/s/">日记</a>]</span></p>
-        <figure>
-            <a title="IP要突破2000+了" href="http://www.yangqq.com/news/s/2016-05-20/751.html"><img src="#" alt="IP要突破2000+了">></a>
-            <span></span>
-        </figure>
-        <ul class="nlist">
-           &lt;%&ndash;<p>很久都没有更新网站了，现在得空看了下网站怎么样了，没有想到，百度权重4,PR3,访问IP也在上升，一年的时间没有更新，看来一次性做好一个网站很有必要，这回一劳永逸了</p>&ndash;%&gt;
-           <p></p>
-            <a href="/main/lifeDetails.do" title="IP要突破2000+了" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>
-
-
-        <h2><a title="【孕期日记】生活本该如此" href="http://www.yangqq.com/news/s/2015-01-23/741.html">【孕期日记】生活本该如此</a></h2>
-        <p class="dateview"><span>发布时间：2015-01-28</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/news/s/">日记</a>]</span></p>
-        <figure>
-            <a title="【孕期日记】生活本该如此" href="http://www.yangqq.com/news/s/2015-01-23/741.html"><img src="img/7b1559b0c4343a005531ef245a5c5246.jpg" alt="【孕期日记】生活本该如此"></a>
-        </figure>
-        <ul class="nlist">
-            <p>这是第一篇2015年的生活日记，我的这个博客也因为孕期给耽搁了不少，要不然每个月都能出一两套模板，或者定时更新一些技术文章，群里面也很少参与讨论。现在因为这个即将到来的小家伙，我不得不舍弃一些时间和精力。</p>
-            <a href="http://www.yangqq.com/news/s/2015-01-23/741.html" title="【孕期日记】生活本该如此" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>
---%>
-       <%-- <div class="blank"></div>--%>
-      <%--  <div class="page">
-            <a title="Total record"><b>107</b> </a><b>1</b>
-            <a href="http://www.yangqq.com/news/index_2.html">2</a>
-            <a href="http://www.yangqq.com/news/index_3.html">3</a>
-            <a href="http://www.yangqq.com/news/index_4.html">4</a>
-            <a href="http://www.yangqq.com/news/index_5.html">5</a>
-            <a href="http://www.yangqq.com/news/index_2.html">&gt;</a>
-            <a href="http://www.yangqq.com/news/index_5.html">&gt;&gt;</a>
-        </div>--%>
-
-              <%--   <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>--%>
          </div>
     <aside class="right">
         <div class="rnav">
@@ -188,16 +148,12 @@
     </aside>
 </article>
 <div id="tbox">
-    <a id="togbook" href="/main/life.do"></a>
+    <a id="togbook" href="#"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
     <p>Design by zizhuling
         <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
-     <%--   <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>

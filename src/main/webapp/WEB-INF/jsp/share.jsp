@@ -101,10 +101,8 @@
     <script src="/js/modernizr.js"></script>
     <![endif]-->
     <!-- 返回顶部调用 begin -->
-    <link href="/css/lrtk.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css"  rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/css/js.js"></script>
     <!-- 返回顶部调用 end-->
 </head>
 
@@ -131,42 +129,6 @@
         <a href="/main/main.do" class="n1">网站首页</a><a href="#" class="n2">模板分享</a></h1>
     <div class="newblog left" id="findshare">
 
-
-     <%--   <h2><a title="灯具公司复古风格PSD设计稿" href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html">灯具公司复古风格PSD设计稿</a></h2>
-        <p class="dateview"><span>发布时间：2017-07-16</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/download/newsfree/">企业网站模板</a>]</span></p>
-        <figure>
-            <a title="灯具公司复古风格PSD设计稿" href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html"><img src="img/8c6ef10d94e5bedde81f275da2c2a3e0.jpg" alt="灯具公司复古风格PSD设计稿"></a>
-        </figure>
-        <ul class="nlist">
-            <p>此模板为PSD设计稿，复古风格。首页主要突出产品，以及公司简介。手绘灯作为头部背景图片，这个比较特别。html可以做出灯一闪一闪的效果，或者说旁边有个按钮，点击就变换背</p>
-            <a href="http://www.yangqq.com/download/newsfree/2017-07-16/786.html" target="_blank" title="灯具公司复古风格PSD设计稿" class="readmore">详细信息&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>
-
-
-
-        <h2><a title="个人博客模板古典系列之——江南墨卷Html" href="http://www.yangqq.com/download/div/2017-07-16/785.html">个人博客模板古典系列之——江南墨卷Html</a></h2>
-        <p class="dateview"><span>发布时间：2017-07-16</span><span>作者：杨青</span><span>[<a href="http://www.yangqq.com/download/div/">原创个人博客模板</a>]</span></p>
-        <figure>
-            <a title="个人博客模板古典系列之——江南墨卷Html" href="http://www.yangqq.com/download/div/2017-07-16/785.html"><img src="img/eeabb1486585f0514c313be50f25664d.jpg" alt="个人博客模板古典系列之——江南墨卷Html"></a>
-        </figure>
-        <ul class="nlist">
-            <p>一共是四个页面，首页，图文列表，图片列表，文字内容。此模板风格为中国古典风格，山水画墨迹成就一幅江南墨卷。页面首页设计较为简单，突出文章重点。二级栏目导航菜单。图文列表显示，可用作相册展示，有鼠标滑过放大的效果。</p>
-            <a href="http://www.yangqq.com/download/div/2017-07-16/785.html" target="_blank" title="个人博客模板古典系列之——江南墨卷Html" class="readmore">详细信息&gt;&gt;</a>
-        </ul>
-        <div class="line"></div>--%>
-
-
-       <%-- <div class="blank"></div>
-        <div class="page">
-            <a title="Total record"><b>90</b> </a><b>1</b>
-            <a href="http://www.yangqq.com/download/index_2.html">2</a>
-            <a href="http://www.yangqq.com/download/index_3.html">3</a>
-            <a href="http://www.yangqq.com/download/index_4.html">4</a>
-            <a href="http://www.yangqq.com/download/index_2.html">&gt;</a>
-            <a href="http://www.yangqq.com/download/index_4.html">&gt;&gt;</a>
-        </div>--%>
-       <%-- <div style="width: 600px;margin-left: 20%;float: left;" id="footer"></div>--%>
     </div>
     <aside class="right">
         <script type="text/javascript">
@@ -296,16 +258,12 @@
     </aside>
 </article>
 <div id="tbox">
-    <a id="togbook" href="/main/share.do"></a>
+    <a id="togbook" href="#"></a>
     <a id="gotop" href="javascript:void(0)" style="display: none;"></a>
 </div>
 <footer>
     <p>Design by zizhuling
         <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备18012534号</a>
-      <%--  <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff655f558c510211e38805f6b586e6b15' type='text/javascript'%3E%3C/script%3E"));
-        </script>--%>
         <script src="/js/h.js" type="text/javascript"></script>
     </p>
 </footer>
