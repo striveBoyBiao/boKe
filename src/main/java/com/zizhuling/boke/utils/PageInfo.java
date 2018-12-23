@@ -1,4 +1,4 @@
-package com.siyuruoli.utils;
+package com.zizhuling.boke.utils;
 import java.util.List;
 /**
  * 分页

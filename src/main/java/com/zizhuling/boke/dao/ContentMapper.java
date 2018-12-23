@@ -1,7 +1,6 @@
-package com.siyuruoli.dao;
+package com.zizhuling.boke.dao;
 
-import com.siyuruoli.model.ContentDO;
-import org.springframework.stereotype.Repository;
+import com.zizhuling.boke.model.ContentDO;
 
 import java.util.List;
 import java.util.Map;

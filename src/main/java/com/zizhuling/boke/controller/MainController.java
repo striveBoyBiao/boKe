@@ -1,7 +1,7 @@
-package com.siyuruoli.controller;
+package com.zizhuling.boke.controller;
 
-import com.siyuruoli.service.MainService;
-import com.siyuruoli.utils.PageInfo;
+import com.zizhuling.boke.service.MainService;
+import com.zizhuling.boke.utils.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

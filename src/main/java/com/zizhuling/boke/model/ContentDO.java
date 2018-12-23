@@ -1,4 +1,4 @@
-package com.siyuruoli.model;
+package com.zizhuling.boke.model;
 
 import java.io.Serializable;
 import java.util.Date;

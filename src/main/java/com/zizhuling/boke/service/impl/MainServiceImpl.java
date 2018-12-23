@@ -1,14 +1,13 @@
-package com.siyuruoli.service.impl;
+package com.zizhuling.boke.service.impl;
 
-import com.siyuruoli.dao.ContentMapper;
-import com.siyuruoli.model.ContentDO;
-import com.siyuruoli.service.MainService;
-import com.siyuruoli.utils.PageInfo;
+import com.zizhuling.boke.model.ContentDO;
+import com.zizhuling.boke.service.MainService;
+import com.zizhuling.boke.dao.ContentMapper;
+import com.zizhuling.boke.utils.PageInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +15,7 @@ import java.util.Map;
  * Created by 11697 on 2018/11/18.
  */
 @Service
-public class MainServiceImpl implements MainService{
+public class MainServiceImpl implements MainService {
     @Autowired
     private ContentMapper contentMapper;
 

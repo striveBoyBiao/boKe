@@ -1,9 +1,7 @@
-package com.siyuruoli.service;
+package com.zizhuling.boke.service;
 
-import com.siyuruoli.model.ContentDO;
-import com.siyuruoli.utils.PageInfo;
+import com.zizhuling.boke.utils.PageInfo;
 
-import java.util.List;
 import java.util.Map;
 
 /**
