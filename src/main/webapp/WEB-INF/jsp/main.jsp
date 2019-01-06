@@ -145,6 +145,8 @@
 <footer>
     <p>Design by <a href="/main/about.do" target="_blank">zizhuling</a></p>
 </footer>
+<script color="255,0,0" opacity="0.7" zindex="-2" count="150" src="/js/canvas-nest.min.js"></script><canvas id="c_n6" width="2048" height="962" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.7;"></canvas>
+
 </body>
 </html>
 

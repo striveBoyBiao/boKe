@@ -229,6 +229,8 @@
 <script type="text/javascript" src="js/i.js"></script>
 
 <script src="js/saved_resource(1)"></script>
+<script color="255,0,0" opacity="0.7" zindex="-2" count="150" src="/js/canvas-nest.min.js"></script><canvas id="c_n6" width="2048" height="962" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.7;"></canvas>
+
 </body>
 
 </html>
